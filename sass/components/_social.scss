@@ -1,0 +1,15 @@
+.social__image {
+  display: block;
+  //   width: 7rem;
+  height: 15rem;
+}
+
+.social__list {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem;
+
+  &-item {
+    list-style-type: none;
+  }
+}

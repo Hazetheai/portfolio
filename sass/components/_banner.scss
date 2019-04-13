@@ -1,0 +1,48 @@
+.banner {
+  position: relative;
+  margin: 15rem 15rem 0 15rem;
+  padding: 5rem;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(
+    207.52deg,
+    #f7f7f7b3 41.39%,
+    #d5dadfb3 46.03%,
+    #f7f7f7b3 72.12%
+  );
+}
+
+.name {
+  flex: 4 55%;
+
+  &__header {
+    margin-top: 5rem;
+  }
+
+  &__tag {
+    margin-top: 4rem;
+  }
+}
+
+.nav {
+  flex: 2 10%;
+  margin: 0 2rem 0 2rem;
+  //   margin: 0 -17rem 0 17rem;
+
+  &__list {
+    display: flex;
+    justify-content: space-around;
+
+    &-item {
+      list-style: none;
+      padding: 0 2rem 0 2rem;
+    }
+  }
+}
+
+.info {
+  position: relative;
+  left: 16rem;
+  // flex: 3 30%;
+  margin-left: 3rem;
+}

@@ -1,0 +1,82 @@
+.contact {
+  margin: 5rem 15rem 0 15rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.form {
+  display: flex;
+  //   flex-direction: column;
+  flex: 5 80%;
+
+  &__label {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    &--name {
+      margin-top: 1rem;
+    }
+    &--email {
+      margin: 2.7rem 0 0 0;
+    }
+    &--message {
+      margin: 2.4rem 0 auto 0;
+    }
+  }
+
+  &__input {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    margin-left: 2rem;
+    background-color: $color-grey-light-2;
+
+    &--name {
+      display: block;
+      margin: 0 0 2rem 0;
+      width: 50%;
+      font-size: 2rem;
+      padding: 0;
+      border: none;
+      border-bottom: 0.5px solid $color-grey-dark-1;
+      outline: 0;
+      background-color: $color-grey-light-2;
+    }
+
+    &--email {
+      display: block;
+      width: 50%;
+      font-size: 2rem;
+      padding: 0;
+      border: none;
+      //   border-bottom: 0.5px solid $color-grey-dark-1;
+      outline: 0;
+      background-color: $color-grey-light-2;
+    }
+
+    &--textarea {
+      display: block;
+      margin: auto;
+      width: 100%;
+      font-size: 2rem;
+      padding: 1rem 0;
+      line-height: 4rem;
+      background-image: linear-gradient(
+        $color-grey-dark-1 1px,
+        transparent 1px
+      );
+      background-size: 100% 4rem;
+      border: 0;
+      outline: 0;
+      resize: none;
+      background-color: $color-grey-light-2;
+    }
+  }
+}
+
+.social {
+  flex: 2 33.33%;
+  margin-left: 5rem;
+}

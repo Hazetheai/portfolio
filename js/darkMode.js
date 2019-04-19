@@ -1,5 +1,7 @@
 let elems = [...document.getElementsByTagName("*")];
+const high = document.querySelector(".highlight");
 const dev = document.querySelector(".dev");
+
 // if (elems[0] == `<main>`) console.log("html");
 
 const goDark = () => {
@@ -65,4 +67,5 @@ const goDark = () => {
 };
 
 dev.addEventListener("click", goDark);
-console.log(document.body.style);
+console.log(dev.style);
+console.log(window.getComputedStyle(high));

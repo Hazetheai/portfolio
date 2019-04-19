@@ -1,0 +1,13 @@
+.btn {
+  border-radius: 1rem;
+  background-color: $color-tertiary-light;
+  padding: 1rem;
+  margin-left: auto;
+  outline: none;
+
+  &:active,
+  :focus {
+    transform: scale(0.9);
+    box-shadow: $box-shadow;
+  }
+}

@@ -1,6 +1,6 @@
 .banner {
   position: relative;
-  margin: 15rem 15rem 0 15rem;
+  margin: 7rem 15rem 0 15rem;
   padding: 5rem;
   display: flex;
   justify-content: center;
@@ -36,13 +36,26 @@
     &-item {
       list-style: none;
       padding: 0 2rem 0 2rem;
+
+      &--link,
+      :active,
+      :link,
+      :visited {
+        text-decoration: none;
+        color: inherit;
+
+        &:hover {
+          border-bottom: 1px solid $color-grey-dark-1;
+        }
+      }
     }
   }
 }
 
 .info {
   position: relative;
-  left: 16rem;
+  left: 10rem;
+  width: 24rem;
   // flex: 3 30%;
   margin-left: 3rem;
 }

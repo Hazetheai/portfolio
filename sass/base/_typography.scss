@@ -11,13 +11,13 @@ body {
   text-transform: uppercase;
 
   backface-visibility: hidden;
-  margin-bottom: 60px;
+  margin-bottom: 6rem;
 
   &--main {
     display: block;
     font-size: 6rem;
     font-weight: 400;
-    letter-spacing: 3.5rem;
+    letter-spacing: 1.5rem;
 
     animation: moveInLeft 1s ease-in-out;
 
@@ -32,7 +32,7 @@ body {
     display: block;
     font-size: 2rem;
     font-weight: 700;
-    letter-spacing: 1.75rem;
+    letter-spacing: 0.35rem;
     animation: moveInRight 1s ease-in-out;
     @include respond(phone) {
       letter-spacing: 0.5rem;
@@ -79,7 +79,15 @@ body {
 .paragraph {
   font-size: $default-font-size;
 
+  &--sm {
+    font-size: $smaller-font-size;
+  }
+
   &:not(:last-child) {
     margin-bottom: 3rem;
   }
+}
+
+.highlight {
+  background-color: $color-grey-dark-1;
 }

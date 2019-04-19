@@ -15,25 +15,31 @@
     <main>
       <section class="banner">
         <div class="name">
-          <h2 class="name__header heading-primary">Jake</h2>
-          <h3 class="name__tag heading-secondary">
+          <h2 class="name__header heading-primary--main">Jake</h2>
+          <h3 class="name__tag heading-primary--sub">
             Web developer &amp; designer <br />
             Creative coder
           </h3>
         </div>
         <div class="nav">
-          <ul class="nav__list">
-            <li class="nav__list-item">Blog</li>
-            <li class="nav__list-item">Projects</li>
+          <ul class="nav__list heading-tertiary">
+            <li class="nav__list-item">
+              <a class="nav__list-item--link" href="#0">Blog</a>
+            </li>
+            <li class="nav__list-item">
+              <a class="nav__list-item--link" href="#0">Projects</a>
+            </li>
           </ul>
         </div>
-        <div class="info">
+        <div class="info paragraph--sm">
           <p class="info--1">
             Hailing from Ireland, currently living in Montrèal, QC. <br />
             <br />
             Available for freelance work. <br />
             <br />
-            Actively seeking a front-end developer position.
+            <span class="highlight"
+              >Actively seeking a front-end developer position.</span
+            >
           </p>
           <br />
           <p class="info--2">
@@ -72,6 +78,9 @@
               cols="30"
               rows="3"
             ></textarea>
+            <button class="form__input--btn btn" type="submit">
+              Send &#9993;
+            </button>
           </div>
         </form>
         <!-- </div> -->

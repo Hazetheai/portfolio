@@ -4,7 +4,8 @@
   "description": "A pintrest clone for synthesizers and their enthusiasts",
   "main": "scripts.js",
   "scripts": {
-    "watch:sass": "node-sass sass/main.scss css/style.css -w"
+    "watch:sass": "node-sass sass/main.scss css/style.css -w",
+    "compile:sass": "node-sass sass/main.scss css/style.css"
   },
   "repository": {
     "type": "git",

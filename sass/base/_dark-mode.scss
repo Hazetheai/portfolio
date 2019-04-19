@@ -1,0 +1,14 @@
+.t--dark {
+  background-color: $color-black;
+  filter: invert(100%);
+  transition: all 750ms;
+}
+
+* {
+  background-color: inherit;
+}
+
+img:not([src*=".svg"]),
+video {
+  filter: invert(100%);
+}

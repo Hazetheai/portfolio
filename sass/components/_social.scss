@@ -1,7 +1,10 @@
 .social__image {
   display: block;
+  // background-image: url(../../images/Me.png);
   //   width: 7rem;
   height: 15rem;
+  margin: auto;
+  filter: grayscale(1);
 }
 
 .social__list {
@@ -11,5 +14,17 @@
 
   &-item {
     list-style-type: none;
+
+    &--link,
+    :active,
+    :link,
+    :visited {
+      text-decoration: none;
+      color: inherit;
+
+      &:hover {
+        border-bottom: 1px solid $color-grey-dark-1;
+      }
+    }
   }
 }

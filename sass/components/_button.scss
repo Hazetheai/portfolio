@@ -1,9 +1,10 @@
 .btn {
   border-radius: 1rem;
-  background-color: $color-tertiary-light;
+  background-color: $color-grey-dark-2;
   padding: 1rem;
   margin-left: auto;
   outline: none;
+  cursor: pointer;
 
   &:active,
   :focus {

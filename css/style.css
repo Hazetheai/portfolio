@@ -171,10 +171,11 @@ body {
 
 .btn {
   border-radius: 1rem;
-  background-color: #ca5195;
+  background-color: #d5dadfb3;
   padding: 1rem;
   margin-left: auto;
-  outline: none; }
+  outline: none;
+  cursor: pointer; }
   .btn:active,
   .btn :focus {
     transform: scale(0.9);
@@ -285,7 +286,9 @@ body {
 
 .social__image {
   display: block;
-  height: 15rem; }
+  height: 15rem;
+  margin: auto;
+  filter: grayscale(1); }
 
 .social__list {
   display: flex;
@@ -293,3 +296,14 @@ body {
   margin: 1rem; }
   .social__list-item {
     list-style-type: none; }
+    .social__list-item--link,
+    .social__list-item :active,
+    .social__list-item :link,
+    .social__list-item :visited {
+      text-decoration: none;
+      color: inherit; }
+      .social__list-item--link:hover,
+      .social__list-item :active:hover,
+      .social__list-item :link:hover,
+      .social__list-item :visited:hover {
+        border-bottom: 1px solid #c4c4c4; }

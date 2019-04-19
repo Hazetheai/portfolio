@@ -5,6 +5,19 @@
   transform: translate(-50%, -50%);
 }
 
+@mixin link {
+  :active,
+  :link,
+  :visited {
+    text-decoration: none;
+    color: inherit;
+
+    &:hover {
+      border-bottom: 1px solid $color-grey-dark-1;
+    }
+  }
+}
+
 // Media Query Manager
 
 /*

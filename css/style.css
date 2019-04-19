@@ -162,7 +162,7 @@ body {
 .paragraph {
   font-size: 1.6rem; }
   .paragraph--sm {
-    font-size: 1.4rem; }
+    font-size: 1.3rem; }
   .paragraph:not(:last-child) {
     margin-bottom: 3rem; }
 
@@ -224,7 +224,7 @@ body {
   margin-left: 3rem; }
 
 .contact {
-  margin: 5rem 15rem 0 15rem;
+  margin: 2rem 15rem 0 15rem;
   display: flex;
   justify-content: space-between; }
 
@@ -287,7 +287,8 @@ body {
 .social__image {
   display: block;
   height: 15rem;
-  margin: auto;
+  margin: 0 auto 5rem auto;
+  transform: scale(1.5);
   filter: grayscale(1); }
 
 .social__list {

@@ -39,7 +39,7 @@ html {
 body {
   box-sizing: border-box;
   padding: 3rem;
-  background-color: #f7f7f7b3; }
+  background-color: rgba(247, 247, 247, 0.702); }
   @media only screen and (max-width: 56.25em) {
     body {
       padding: 0; } }
@@ -105,10 +105,10 @@ body {
   font-weight: 400;
   /* font-size: 16px; */
   line-height: 1.7;
-  color: #333; }
+  color: #333333; }
 
 .heading-primary {
-  color: #111;
+  color: #111111;
   text-transform: uppercase;
   backface-visibility: hidden;
   margin-bottom: 6rem; }
@@ -171,7 +171,7 @@ body {
 
 .btn {
   border-radius: 1rem;
-  background-color: #d5dadfb3;
+  background-color: rgba(213, 218, 223, 0.702);
   padding: 1rem;
   margin-left: auto;
   outline: none;
@@ -187,7 +187,7 @@ body {
   padding: 5rem;
   display: flex;
   justify-content: center;
-  background: linear-gradient(207.52deg, #f7f7f7b3 41.39%, #d5dadfb3 46.03%, #f7f7f7b3 72.12%); }
+  background: linear-gradient(207.52deg, rgba(247, 247, 247, 0.702) 41.39%, rgba(213, 218, 223, 0.702) 46.03%, rgba(247, 247, 247, 0.702) 72.12%); }
 
 .name {
   flex: 4 55%; }
@@ -247,7 +247,7 @@ body {
     justify-content: flex-start;
     width: 100%;
     margin-left: 2rem;
-    background-color: #f7f7f7b3; }
+    background-color: rgba(247, 247, 247, 0.702); }
     .form__input--name {
       display: block;
       width: 50%;
@@ -257,7 +257,7 @@ body {
       border-bottom: 0.5px solid #c4c4c4;
       outline: none;
       font-family: inherit;
-      background-color: #f7f7f7b3; }
+      background-color: rgba(247, 247, 247, 0.702); }
     .form__input--email {
       display: block;
       width: 50%;
@@ -267,10 +267,10 @@ body {
       border-bottom: 0.5px solid #c4c4c4;
       outline: none;
       font-family: inherit;
-      background-color: #f7f7f7b3; }
+      background-color: rgba(247, 247, 247, 0.702); }
     .form__input--textarea {
       background-attachment: local;
-      background-image: linear-gradient(to right, #f7f7f7b3 -1rem, transparent 1rem), linear-gradient(to left, #f7f7f7b3 -1rem, transparent 1rem), repeating-linear-gradient(#f7f7f7b3, #f7f7f7b3 3rem, #c4c4c4 3rem, #c4c4c4 3.1rem, #f7f7f7b3 3.1rem);
+      background-image: linear-gradient(to right, rgba(247, 247, 247, 0.702) -1rem, transparent 1rem), linear-gradient(to left, rgba(247, 247, 247, 0.702) -1rem, transparent 1rem), repeating-linear-gradient(rgba(247, 247, 247, 0.702), rgba(247, 247, 247, 0.702) 3rem, #c4c4c4 3rem, #c4c4c4 3.1rem, rgba(247, 247, 247, 0.702) 3.1rem);
       line-height: 3.1rem;
       margin: 0 0 2rem 0;
       padding: 0.8rem 0rem;

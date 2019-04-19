@@ -8,15 +8,28 @@ $color-secondary-dark: #542600;
 $color-tertiary-light: #ca5195;
 $color-tertiary-dark: #440026;
 
-$color-grey-light-1: #f7f7f7;
-$color-grey-light-2: #f7f7f7b3;
+$color-grey-light-1: rgb(247, 247, 247);
+$color-grey-light-2: rgba(247, 247, 247, 0.702);
 
-$color-grey-dark-1: #c4c4c4;
-$color-grey-dark-2: #d5dadfb3;
-$color-grey-dark-3: #333;
+//DarkMode
+$color-grey-light-1-dm: rgb(8, 8, 8);
+$color-grey-light-1-dm: rgb(51, 51, 51);
 
-$color-white: azure;
-$color-black: #111;
+$color-grey-dark-1: rgb(196, 196, 196);
+$color-grey-dark-2: rgba(213, 218, 223, 0.702);
+$color-grey-dark-3: rgb(51, 51, 51);
+
+//DarkMode
+$color-grey-dark-1-dm: rgb(59, 59, 59);
+$color-grey-dark-2-dm: rgb(59, 55, 51);
+$color-grey-dark-3-dm: rgb(204, 204, 204);
+
+$color-white: rgb(240, 255, 255);
+$color-black: rgb(17, 17, 17);
+
+//DarkMode
+$color-white-dm: rgb(15, 0, 0);
+$color-black-dm: rgb(238, 238, 238);
 
 $box-shadow: 0 1.5em 4rem rgba($color-black, $alpha: 0.15);
 $box-shadow-2: 0 0.5rem 1rem rgba($color-black, 0.2);

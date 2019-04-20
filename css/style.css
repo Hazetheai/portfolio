@@ -168,17 +168,14 @@ body {
 .highlight {
   background-color: #c4c4c4; }
 
-.t--dark {
+.t--dark:not(.social__image),
+video {
   background-color: #111111;
   filter: invert(100%);
   transition: all 750ms; }
-
-* {
-  background-color: inherit; }
-
-img:not([src*=".svg"]),
-video {
-  filter: invert(100%); }
+  .t--dark:not(.social__image)-img,
+  video-img {
+    filter: invert(100%); }
 
 .btn {
   border-radius: 1rem;
@@ -194,11 +191,10 @@ video {
 
 .banner {
   position: relative;
-  margin: 7rem 15rem 0 15rem;
-  padding: 5rem;
+  margin: 0rem 15rem 0 15rem;
+  padding: 12rem 5rem 2rem 5rem;
   display: flex;
-  justify-content: center;
-  background: linear-gradient(156.52deg, #f7f7f7 41.39%, #d5dadf 46.03%, #f7f7f7 72.12%); }
+  justify-content: center; }
 
 .name {
   flex: 4 55%; }
@@ -206,6 +202,11 @@ video {
     margin-top: 5rem; }
   .name__tag {
     margin-top: 4rem; }
+
+.dev,
+.design,
+.cCoder {
+  cursor: pointer; }
 
 .nav {
   flex: 2 10%;
@@ -234,12 +235,6 @@ video {
   width: 24rem;
   margin-left: 3rem; }
 
-.contact {
-  margin: 2rem 15rem 0 15rem;
-  display: flex;
-  justify-content: space-between;
-  background-color: #f7f7f7; }
-
 .form {
   display: flex;
   flex: 5 80%;
@@ -248,15 +243,16 @@ video {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    background-color: inherit; }
+    background-color: inherit;
+    font-size: 1.3rem; }
     .form__label--name {
-      margin-top: 0.8rem;
+      margin-top: 0.3rem;
       background-color: inherit; }
     .form__label--email {
-      margin: 2.3rem 0 0 0;
+      margin: 2rem 0 0 0;
       background-color: inherit; }
     .form__label--message {
-      margin: 2.3rem 0 auto 0;
+      margin: 2rem 0 auto 0;
       background-color: inherit; }
   .form__input {
     display: flex;
@@ -276,7 +272,8 @@ video {
       outline: none;
       font-family: inherit;
       background-color: #f7f7f7;
-      background-color: inherit; }
+      background-color: inherit;
+      font-size: 1.3rem; }
     .form__input--email {
       display: block;
       width: 50%;
@@ -287,10 +284,11 @@ video {
       outline: none;
       font-family: inherit;
       background-color: #f7f7f7;
-      background-color: inherit; }
+      background-color: inherit;
+      font-size: 1.3rem; }
     .form__input--textarea {
       background-attachment: local;
-      background-image: linear-gradient(to right, #f7f7f7 -1rem, transparent 1rem), linear-gradient(to left, #f7f7f7 -1rem, transparent 1rem), repeating-linear-gradient(#f7f7f7, #f7f7f7 3rem, #c4c4c4 3rem, #c4c4c4 3.1rem, #f7f7f7 3.1rem);
+      background-image: linear-gradient(to right, transparent -1rem, transparent 1rem), linear-gradient(to left, transparent -1rem, transparent 1rem), repeating-linear-gradient(transparent, transparent 3rem, #c4c4c4 3rem, #c4c4c4 3.1rem, transparent 3.1rem);
       line-height: 3.1rem;
       margin: 0 0 2rem 0;
       padding: 0.8rem 0rem;
@@ -299,12 +297,20 @@ video {
       resize: none;
       outline: none;
       font-family: inherit;
-      background-color: inherit; }
+      background-color: inherit;
+      font-size: 1.3rem; }
+
+.contact {
+  margin: 0 15rem 0 15rem;
+  padding-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  background-color: transparent; }
 
 .social {
   flex: 2 33.33%;
   padding-left: 5rem;
-  background-color: #f7f7f7; }
+  background-color: transparent; }
   .social__image {
     display: block;
     height: 15rem;
@@ -330,5 +336,7 @@ video {
           border-bottom: 1px solid #c4c4c4; }
 
 main {
-  background-color: #f7f7f7;
   height: 100vh; }
+
+.g-wrapper {
+  background: linear-gradient(156.52deg, #f7f7f7 41.39%, #d5dadf 46.03%, #f7f7f7 72.12%); }

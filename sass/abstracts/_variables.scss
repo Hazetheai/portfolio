@@ -11,25 +11,16 @@ $color-tertiary-dark: #440026;
 $color-grey-light-1: rgb(247, 247, 247);
 $color-grey-light-2: #f7f7f7;
 
-//DarkMode
-$color-grey-light-1-dm: rgb(8, 8, 8);
-$color-grey-light-1-dm: rgb(51, 51, 51);
-
 $color-grey-dark-1: rgb(196, 196, 196);
 $color-grey-dark-2: rgb(213, 218, 223);
 $color-grey-dark-3: #333333;
 
-//DarkMode
-$color-grey-dark-1-dm: rgb(59, 59, 59);
-$color-grey-dark-2-dm: rgb(59, 55, 51);
-$color-grey-dark-3-dm: rgb(204, 204, 204);
-
 $color-white: rgb(240, 255, 255);
 $color-black: rgb(17, 17, 17);
 
-//DarkMode
-$color-white-dm: rgb(15, 0, 0);
-$color-black-dm: rgb(238, 238, 238);
+$color-transparent: transparent;
+
+$txt-z-index: 5;
 
 $box-shadow: 0 1.5em 4rem rgba($color-black, $alpha: 0.15);
 $box-shadow-2: 0 0.5rem 1rem rgba($color-black, 0.2);

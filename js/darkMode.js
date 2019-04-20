@@ -11,6 +11,8 @@ const button = [...document.querySelectorAll("button")];
 const input = [...document.querySelectorAll("input")];
 const textarea = [...document.querySelectorAll("textarea")];
 
+const img = document.querySelector("img");
+
 let textElems = [input, button, textarea];
 
 const body = document.querySelector("body");
@@ -35,23 +37,28 @@ const body = document.querySelector("body");
 let darkTheme = false;
 
 const bodyTxtDark = () => {
+  otherTextDark(textElems);
   if (darkTheme == false) {
     body.classList.add("t--dark");
     body.style.color = "#653e22";
-    otherTextDark(textElems);
+    img.classList.add("t--dark-img");
 
     return (darkTheme = true);
   } else body.style.color = "#333";
   body.classList.remove("t--dark");
+  img.classList.remove("t--dark-img");
   return (darkTheme = false);
 };
 
 const otherTextDark = el => {
-  if (darkTheme == false) {
-    el.forEach(elem =>
-      elem.forEach(element => (element.style.color = "#653e22"))
-    );
-  }
+  el.forEach(elem =>
+    elem.forEach(element => {
+      if (darkTheme == false) {
+        element.style.color = "#653e22";
+      } else element.style.color = "#333";
+    })
+  );
 };
 
-// bodyTxtDark(body);
+const dev = document.querySelector(".dev");
+dev.addEventListener("click", bodyTxtDark);

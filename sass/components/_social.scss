@@ -1,7 +1,7 @@
 .social {
   flex: 2 33.33%;
   padding-left: 5rem;
-  background-color: $color-grey-light-2;
+  background-color: transparent;
 
   &__image {
     display: block;
@@ -10,6 +10,7 @@
     transform: scale(1.5);
 
     filter: grayscale(1);
+    // display: none;
   }
 
   &__list {

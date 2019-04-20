@@ -1,15 +1,9 @@
 .banner {
   position: relative;
-  margin: 7rem 15rem 0 15rem;
-  padding: 5rem;
+  margin: 0rem 15rem 0 15rem;
+  padding: 12rem 5rem 2rem 5rem;
   display: flex;
   justify-content: center;
-  background: linear-gradient(
-    156.52deg,
-    $color-grey-light-2 41.39%,
-    $color-grey-dark-2 46.03%,
-    $color-grey-light-2 72.12%
-  );
 }
 
 .name {
@@ -22,6 +16,12 @@
   &__tag {
     margin-top: 4rem;
   }
+}
+
+.dev,
+.design,
+.cCoder {
+  cursor: pointer;
 }
 
 .nav {

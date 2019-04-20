@@ -1,12 +1,12 @@
 class Boid {
   constructor() {
-    this.position = createVector(random(width), random(height));
+    this.position = createVector(mouseX, mouseY);
     this.velocity = p5.Vector.random2D();
     this.velocity.setMag(random(2, 4));
     this.acceleration = createVector();
     this.r = 3;
     this.maxForce = 0.2;
-    this.maxSpeed = 3;
+    this.maxSpeed = 2;
   }
 
   edges() {
@@ -141,8 +141,8 @@ class Boid {
   render() {
     // Draw a triangle rotated in the direction of velocity
     let theta = this.velocity.heading() + radians(90);
-    fill(127);
-    stroke(200);
+    fill(9);
+    stroke(0);
     push();
     translate(this.position.x, this.position.y);
     rotate(theta);

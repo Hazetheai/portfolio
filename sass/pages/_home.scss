@@ -1,4 +1,14 @@
 main {
-  background-color: $color-grey-light-2;
+  //   background-color: $color-grey-light-2;
+
   height: 100vh; // temporary
+}
+
+.g-wrapper {
+  background: linear-gradient(
+    156.52deg,
+    $color-grey-light-2 41.39%,
+    $color-grey-dark-2 46.03%,
+    $color-grey-light-2 72.12%
+  );
 }

@@ -2,16 +2,20 @@ const flock = [];
 var canvas;
 var bg;
 var showBoids = false;
-let alignSlider, cohesionSlider, seperationSlider;
+let alignSlider, cohesionSlider, seperationSlider, opacitySlider;
+let opac = 0;
+var slidVal;
 
 function windowResized() {
-  resizeCanvas();
+  resizeCanvas(windowWidth, windowHeight);
 }
 
 function setup() {
   canvas = createCanvas(windowWidth, windowHeight);
   canvas.position(0, 0);
-  canvas.style("z-index", -1);
+  canvas.style("z-index", 0);
+  canvas.style("opacity", 0);
+  canvas.style("pointer-events", "none");
 
   bg = color("#f7f7f7");
 
@@ -19,23 +23,17 @@ function setup() {
   cohesionSlider = createSlider(0, 2, 1, 0.1);
   separationSlider = createSlider(0, 2, 2, 0.1);
 
-  for (let i = 0; i <= 100; i++) {
+  opacitySlider = createSlider(0, 0.6, 0, 0.05);
+
+  for (let i = 0; i <= 10; i++) {
     flock.push(new Boid());
   }
 }
 
-const cCoder = document.querySelector(".cCoder");
-
-const handleBoids = () => {
-  if (showBoids == false) {
-    showBoids = true;
-  } else showBoids = false;
-};
-
-cCoder.addEventListener("click", handleBoids);
-
 function draw() {
-  background(bg, [0.5]);
+  slidVal = opacitySlider.value();
+  canvas.style("opacity", slidVal);
+  background(bg, [0]);
   for (let boid of flock) {
     boid.edges();
     boid.flock(flock);
@@ -46,3 +44,36 @@ function draw() {
     }
   }
 }
+
+const cCoder = document.querySelector(".cCoder");
+
+const handleBoids = () => {
+  if (showBoids == false) {
+    opacitySlider.value(0.2);
+    for (let i = 0; i <= 10; i++) {
+      addBoids();
+    }
+    return (showBoids = true);
+  } else if (showBoids == true) {
+    opacitySlider.value(0);
+    showBoids = false;
+  }
+
+  flock.splice(1);
+};
+
+const addBoids = () => {
+  // console.log("Draggin");
+  flock.push(new Boid(mouseX, mouseY));
+};
+
+function mouseDragged() {
+  if (showBoids == true) {
+    addBoids();
+  }
+}
+
+cCoder.addEventListener("click", handleBoids);
+
+// document.addEventListener("mousedown", mouseDrag);
+// cCoder.addEventListener("mouseover", handleBoids);

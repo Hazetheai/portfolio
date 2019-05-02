@@ -22,9 +22,9 @@
     }
   }
 
-  &__tag {
-    // margin-top: 4rem;
-  }
+  // &__tag {
+  //    margin-top: 4rem;
+  // }
 }
 
 .dev,
@@ -37,6 +37,10 @@
   flex: 2 10%;
   margin: 0 2rem 0 2rem;
   //   margin: 0 -17rem 0 17rem;
+
+  @include respond(mob) {
+    order: -1;
+  }
 
   &__list {
     display: flex;

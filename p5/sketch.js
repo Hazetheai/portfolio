@@ -33,7 +33,7 @@ function setup() {
 }
 
 function windowResized() {
-  resizeCanvas(windowWidth, windowHeight);
+  resizeCanvas(displayWidth, displayHeight);
 }
 
 function draw() {

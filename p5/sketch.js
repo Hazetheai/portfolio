@@ -6,10 +6,6 @@ let alignSlider, cohesionSlider, seperationSlider, opacitySlider;
 let opac = 0;
 var slidVal;
 
-function windowResized() {
-  resizeCanvas(windowWidth, windowHeight);
-}
-
 function setup() {
   canvas = createCanvas(windowWidth, windowHeight);
   canvas.position(0, 0);
@@ -34,6 +30,10 @@ function setup() {
   for (let i = 0; i <= 10; i++) {
     flock.push(new Boid());
   }
+}
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
 }
 
 function draw() {

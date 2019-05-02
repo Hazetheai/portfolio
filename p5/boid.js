@@ -6,7 +6,7 @@ class Boid {
     this.acceleration = createVector();
     this.r = 3;
     this.maxForce = 0.2;
-    this.maxSpeed = 2;
+    this.maxSpeed = 5;
   }
 
   edges() {

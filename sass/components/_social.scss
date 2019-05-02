@@ -3,20 +3,33 @@
   padding-left: 5rem;
   background-color: transparent;
 
+  @include respond(tab-port) {
+    // max-width: 21rem;
+    padding: 0;
+  }
+
   &__image {
     display: block;
-    height: 15rem;
-    margin: 0 auto 5rem auto;
-    transform: scale(1.5);
+    height: 22rem;
+    // margin: 0 auto 5rem auto;
+    // transform: skew(50deg) rotate(30deg);
 
     filter: grayscale(1);
     // display: none;
+
+    @include respond(tab-port) {
+      display: none;
+    }
   }
 
   &__list {
     display: flex;
     justify-content: space-between;
     margin: 1rem;
+    @include respond(tab-port) {
+      margin: 3rem 0;
+      justify-content: space-evenly;
+    }
 
     &-item {
       list-style-type: none;

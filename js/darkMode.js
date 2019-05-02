@@ -5,8 +5,6 @@
 // const span = [...document.querySelectorAll("span")];
 // const link = [...document.querySelectorAll("a")];
 
-// console.log(link.style);
-
 const button = [...document.querySelectorAll("button")];
 const input = [...document.querySelectorAll("input")];
 const textarea = [...document.querySelectorAll("textarea")];
@@ -16,23 +14,6 @@ const img = document.querySelector("img");
 let textElems = [input, button, textarea];
 
 const body = document.querySelector("body");
-
-// const bodyTxtDark = () => {
-//   body.classList.toggle("t--dark");
-//   if (body.classList.contains("t--dark")) {
-//     body.style.color = "#653e22";
-//   } else body.style.color = "#333";
-// };
-
-// const otherTextDark = el => {
-//   el.forEach(elem =>
-//     elem.forEach(element => (element.style.color = "#653e22"))
-//   );
-// };
-
-// otherTextDark(textElems);
-
-// bodyTxtDark(body);
 
 let darkTheme = false;
 

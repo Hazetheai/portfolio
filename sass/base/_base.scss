@@ -35,6 +35,16 @@ body {
   }
 }
 
+.divider {
+  max-width: 75%;
+  margin: 5rem 0rem;
+  display: none;
+  background-color: $color-grey-light-1;
+  @include respond(tab-port) {
+    display: block;
+  }
+}
+
 ::selection {
   background-color: $color-primary;
   color: $color-white;

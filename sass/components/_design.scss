@@ -1,0 +1,10 @@
+.fixed {
+  letter-spacing: 0.35rem;
+  overflow: hidden;
+}
+
+.broken {
+  letter-spacing: 0.5em;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif !important;
+  color: $color-primary;
+}

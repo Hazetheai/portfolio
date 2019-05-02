@@ -19,7 +19,7 @@ body {
     font-weight: 400;
     letter-spacing: 1.5rem;
 
-    animation: moveInLeft 1s ease-in-out;
+    animation: moveInLeft 0.7s ease-in-out;
 
     @include respond(phone) {
       letter-spacing: 1rem;
@@ -33,7 +33,7 @@ body {
     font-size: 2rem;
     font-weight: 700;
     letter-spacing: 0.35rem;
-    animation: moveInRight 1s ease-in-out;
+    animation: moveInRight 0.7s ease-in-out;
     @include respond(phone) {
       letter-spacing: 0.5rem;
     }

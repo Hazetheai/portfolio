@@ -25,6 +25,12 @@ function setup() {
 
   opacitySlider = createSlider(0, 0.6, 0, 0.05);
 
+  // Hide sliders for now
+  alignSlider.style("display", "none");
+  cohesionSlider.style("display", "none");
+  separationSlider.style("display", "none");
+  opacitySlider.style("display", "none");
+
   for (let i = 0; i <= 10; i++) {
     flock.push(new Boid());
   }
@@ -73,7 +79,7 @@ function mouseDragged() {
   }
 }
 
-cCoder.addEventListener("click", handleBoids);
+cCoder.addEventListener("mouseover", handleBoids);
 
 // document.addEventListener("mousedown", mouseDrag);
 // cCoder.addEventListener("mouseover", handleBoids);

@@ -43,6 +43,11 @@ body {
   @include respond(tab-port) {
     display: block;
   }
+
+  @include respond(phone) {
+    margin: 2rem 0rem;
+    max-width: 100%;
+  }
 }
 
 .p5canvas {

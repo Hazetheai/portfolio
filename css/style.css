@@ -51,6 +51,10 @@ body {
   @media only screen and (max-width: 56.25em) {
     .divider {
       display: block; } }
+  @media only screen and (max-width: 37.5em) {
+    .divider {
+      margin: 2rem 0rem;
+      max-width: 100%; } }
 
 .p5canvas {
   width: 100%;
@@ -212,6 +216,10 @@ video {
     .banner {
       flex-wrap: wrap;
       padding: 12rem 0 2rem 0; } }
+  @media only screen and (max-width: 37.5em) {
+    .banner {
+      padding: 2rem 0;
+      margin: 0 5rem; } }
 
 .name {
   flex: 4 55%; }
@@ -220,6 +228,13 @@ video {
     @media only screen and (max-width: 56.25em) {
       .name__header {
         margin: 0 0 5rem 0; } }
+    @media only screen and (max-width: 37.5em) {
+      .name__header {
+        margin: 5rem 0 0 0;
+        text-align: center; } }
+  @media only screen and (max-width: 37.5em) {
+    .name__tag {
+      text-align: center; } }
 
 .dev,
 .design,
@@ -228,19 +243,37 @@ video {
 
 .nav {
   flex: 2 10%;
-  margin: 0 2rem 0 2rem; }
+  margin: 0 2rem; }
+  @media only screen and (max-width: 37.5em) {
+    .nav {
+      order: -1;
+      position: fixed;
+      top: 0;
+      left: 0;
+      padding: 2rem 0;
+      margin: 0;
+      width: 100vw;
+      background-color: #333333;
+      color: #f7f7f7;
+      opacity: 0.75; } }
   .nav__list {
     display: flex;
     justify-content: space-around; }
     .nav__list-item {
       list-style: none;
-      padding: 0 2rem 0 2rem; }
+      padding: 0 2rem; }
       .nav__list-item--link,
       .nav__list-item :active,
       .nav__list-item :link,
       .nav__list-item :visited {
         text-decoration: none;
         color: inherit; }
+        @media only screen and (max-width: 37.5em) {
+          .nav__list-item--link,
+          .nav__list-item :active,
+          .nav__list-item :link,
+          .nav__list-item :visited {
+            padding: 1.5rem; } }
         .nav__list-item--link:hover,
         .nav__list-item :active:hover,
         .nav__list-item :link:hover,
@@ -255,6 +288,9 @@ video {
     .info {
       max-width: 80vw;
       margin: 0; } }
+  @media only screen and (max-width: 37.5em) {
+    .info {
+      text-align: center; } }
 
 .form {
   display: flex;
@@ -266,6 +302,10 @@ video {
     justify-content: flex-start;
     background-color: inherit;
     font-size: 1.3rem; }
+    @media only screen and (max-width: 37.5em) {
+      .form__label {
+        padding-right: 2rem;
+        margin-left: -4rem; } }
     .form__label--name {
       margin-top: 0.3rem;
       background-color: inherit; }
@@ -283,6 +323,10 @@ video {
     padding-left: 2rem;
     background-color: #f7f7f7;
     background-color: inherit; }
+    @media only screen and (max-width: 37.5em) {
+      .form__input {
+        width: 85%;
+        padding: 0; } }
     .form__input--name {
       display: block;
       width: 50%;
@@ -320,6 +364,9 @@ video {
       font-family: inherit;
       background-color: inherit;
       font-size: 1.3rem; }
+    @media only screen and (max-width: 37.5em) {
+      .form__input--btn {
+        width: 100%; } }
 
 .contact {
   margin: 0rem 8rem;
@@ -348,25 +395,44 @@ video {
         display: none; } }
   .social__list {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     margin: 1rem; }
     @media only screen and (max-width: 56.25em) {
       .social__list {
         margin: 3rem 0;
         justify-content: space-evenly; } }
     .social__list-item {
-      list-style-type: none; }
+      list-style-type: none;
+      display: flex;
+      min-width: 1rem;
+      text-align: center; }
       .social__list-item--link,
       .social__list-item :active,
       .social__list-item :link,
       .social__list-item :visited {
         text-decoration: none;
-        color: inherit; }
+        color: inherit;
+        padding: 1.5rem; }
         .social__list-item--link:hover,
         .social__list-item :active:hover,
         .social__list-item :link:hover,
         .social__list-item :visited:hover {
           border-bottom: 1px solid #c4c4c4; }
+  .social__icon {
+    max-width: 3rem;
+    display: none; }
+    @media only screen and (max-width: 37.5em) {
+      .social__icon {
+        display: inline; } }
+
+.github::before {
+  content: "Github"; }
+
+.twitter::before {
+  content: "Twitter"; }
+
+.linkedin::before {
+  content: "LinkedIn"; }
 
 .fixed {
   letter-spacing: 0.35rem;

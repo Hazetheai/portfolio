@@ -10,6 +10,11 @@
     background-color: inherit;
     font-size: $smaller-font-size;
 
+    @include respond(phone) {
+      padding-right: 2rem;
+      margin-left: -4rem;
+    }
+
     &--name {
       margin-top: 0.3rem;
       background-color: inherit;
@@ -32,6 +37,11 @@
     padding-left: 2rem;
     background-color: $color-grey-light-2;
     background-color: inherit;
+
+    @include respond(phone) {
+      width: 85%;
+      padding: 0;
+    }
 
     &--name {
       display: block;
@@ -87,6 +97,12 @@
       font-family: inherit;
       background-color: inherit;
       font-size: $smaller-font-size;
+    }
+
+    &--btn {
+      @include respond(phone) {
+        width: 100%;
+      }
     }
   }
 }

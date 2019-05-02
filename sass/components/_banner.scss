@@ -9,6 +9,11 @@
     flex-wrap: wrap;
     padding: 12rem 0 2rem 0;
   }
+
+  @include respond(phone) {
+    padding: 2rem 0;
+    margin: 0 5rem;
+  }
 }
 
 .name {
@@ -20,11 +25,18 @@
     @include respond(tab-port) {
       margin: 0 0 5rem 0;
     }
+
+    @include respond(phone) {
+      margin: 5rem 0 0 0;
+      text-align: center;
+    }
   }
 
-  // &__tag {
-  //    margin-top: 4rem;
-  // }
+  &__tag {
+    @include respond(phone) {
+      text-align: center;
+    }
+  }
 }
 
 .dev,
@@ -35,11 +47,20 @@
 
 .nav {
   flex: 2 10%;
-  margin: 0 2rem 0 2rem;
-  //   margin: 0 -17rem 0 17rem;
+  margin: 0 2rem;
 
-  @include respond(mob) {
+  @include respond(phone) {
     order: -1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 2rem 0;
+    margin: 0;
+    width: 100vw;
+    background-color: $color-grey-dark-3;
+    color: $color-grey-light-1;
+    opacity: 0.75;
+    // Potentially make this a color (Blue?)
   }
 
   &__list {
@@ -48,7 +69,7 @@
 
     &-item {
       list-style: none;
-      padding: 0 2rem 0 2rem;
+      padding: 0 2rem;
 
       &--link,
       :active,
@@ -56,6 +77,10 @@
       :visited {
         text-decoration: none;
         color: inherit;
+
+        @include respond(phone) {
+          padding: 1.5rem;
+        }
 
         &:hover {
           border-bottom: 1px solid $color-grey-dark-1;
@@ -76,5 +101,9 @@
   @include respond(tab-port) {
     max-width: 80vw;
     margin: 0;
+  }
+
+  @include respond(phone) {
+    text-align: center;
   }
 }

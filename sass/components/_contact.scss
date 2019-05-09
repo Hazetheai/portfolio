@@ -8,5 +8,7 @@
   @include respond(tab-port) {
     flex-wrap: wrap;
     justify-content: space-around;
+
+    padding: 0;
   }
 }

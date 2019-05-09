@@ -218,7 +218,7 @@ video {
       padding: 12rem 0 2rem 0; } }
   @media only screen and (max-width: 37.5em) {
     .banner {
-      padding: 2rem 0;
+      padding-top: 3rem;
       margin: 0 5rem; } }
 
 .name {
@@ -377,7 +377,8 @@ video {
   @media only screen and (max-width: 56.25em) {
     .contact {
       flex-wrap: wrap;
-      justify-content: space-around; } }
+      justify-content: space-around;
+      padding: 0; } }
 
 .social {
   flex: 2 33.33%;

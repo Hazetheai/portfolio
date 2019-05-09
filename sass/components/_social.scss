@@ -63,19 +63,19 @@
 }
 
 .github {
-  &::before {
+  &::after {
     content: "Github";
   }
 }
 
 .twitter {
-  &::before {
+  &::after {
     content: "Twitter";
   }
 }
 
 .linkedin {
-  &::before {
+  &::after {
     content: "LinkedIn";
   }
 }

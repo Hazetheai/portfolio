@@ -255,7 +255,7 @@ video {
       width: 100vw;
       background-color: #333333;
       color: #f7f7f7;
-      opacity: 0.75; } }
+      opacity: 0.95; } }
   .nav__list {
     display: flex;
     justify-content: space-around; }
@@ -426,13 +426,13 @@ video {
       .social__icon {
         display: inline; } }
 
-.github::before {
+.github::after {
   content: "Github"; }
 
-.twitter::before {
+.twitter::after {
   content: "Twitter"; }
 
-.linkedin::before {
+.linkedin::after {
   content: "LinkedIn"; }
 
 .fixed {
@@ -459,8 +459,49 @@ video {
   100% {
     transform: rotate(0deg); } }
 
+.project {
+  display: flex;
+  max-width: 95vw;
+  max-height: 65vh;
+  min-height: 40vh;
+  background-color: azure;
+  margin: 0rem 8rem;
+  padding-top: 2rem; }
+  .project:nth-child(2) {
+    background-color: #f7f7f7; }
+  .project__image {
+    object-fit: contain;
+    max-width: 33.3333%;
+    margin: 3rem; }
+  .project__info {
+    width: 66.6666%;
+    margin: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border: 1px solid red; }
+    .project__info-item {
+      display: flex;
+      width: 100%;
+      padding: 0.5rem 2rem;
+      border: 1px solid blue; }
+      .project__info-item--title {
+        width: 30%;
+        margin: 0.3rem;
+        padding: 0.2rem; }
+      .project__info-item--desc {
+        width: 60%;
+        margin: 0.3rem;
+        padding: 0.2rem; }
+
 main {
   height: 100vh; }
 
 .g-wrapper {
   background: linear-gradient(156.52deg, #f7f7f7 41.39%, #d5dadf 46.03%, #f7f7f7 72.12%); }
+
+.projects {
+  height: 100vh; }
+
+.p-wrapper {
+  display: block; }

@@ -1,0 +1,47 @@
+.project {
+  display: flex;
+  max-width: 95vw;
+  max-height: 65vh;
+  min-height: 40vh;
+  background-color: $color-white;
+  margin: 0rem 8rem;
+  padding-top: 2rem;
+
+  &:nth-child(2) {
+    background-color: $color-grey-light-1;
+  }
+
+  &__image {
+    object-fit: contain;
+    max-width: 33.3333%;
+    margin: 3rem;
+  }
+
+  &__info {
+    width: 66.6666%;
+    margin: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border: 1px solid red;
+
+    &-item {
+      display: flex;
+      width: 100%;
+      padding: 0.5rem 2rem;
+      border: 1px solid blue;
+
+      &--title {
+        width: 30%;
+        margin: 0.3rem;
+        padding: 0.2rem;
+      }
+
+      &--desc {
+        width: 60%;
+        margin: 0.3rem;
+        padding: 0.2rem;
+      }
+    }
+  }
+}

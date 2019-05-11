@@ -29,6 +29,7 @@ body {
   box-sizing: border-box;
   // padding: 3rem;
   background-color: $color-grey-light-2;
+  scroll-behavior: smooth;
 
   @include respond(tab-port) {
     padding: 0;

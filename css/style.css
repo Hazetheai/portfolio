@@ -210,7 +210,7 @@ video {
 .banner {
   position: relative;
   margin: 0rem 8rem;
-  padding: 8rem 5rem 2rem 5rem;
+  padding: 6rem 5rem 2rem 5rem;
   display: flex;
   justify-content: space-between; }
   @media only screen and (max-width: 56.25em) {
@@ -370,7 +370,6 @@ video {
 
 .contact {
   margin: 0rem 8rem;
-  padding-top: 2rem;
   display: flex;
   justify-content: space-between;
   background-color: transparent; }
@@ -413,7 +412,7 @@ video {
       .social__list-item :visited {
         text-decoration: none;
         color: inherit;
-        padding: 1.5rem; }
+        padding: 0 1.5rem; }
         .social__list-item--link:hover,
         .social__list-item :active:hover,
         .social__list-item :link:hover,
@@ -422,7 +421,7 @@ video {
   .social__icon {
     max-width: 3rem;
     display: none; }
-    @media only screen and (max-width: 37.5em) {
+    @media only screen and (max-width: 56.25em) {
       .social__icon {
         display: inline; } }
 
@@ -535,9 +534,6 @@ video {
 
 .gib {
   text-decoration: line-through; }
-
-main {
-  height: 100vh; }
 
 .g-wrapper {
   background: linear-gradient(164.75deg, rgba(247, 247, 247, 0.7) 33.16%, rgba(213, 218, 223, 0.7) 37.43%, rgba(213, 218, 223, 0.7) 55.33%, rgba(255, 255, 255, 0.7) 65.61%); }

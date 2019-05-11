@@ -1,7 +1,7 @@
 .banner {
   position: relative;
   margin: 0rem 8rem;
-  padding: 8rem 5rem 2rem 5rem;
+  padding: 6rem 5rem 2rem 5rem;
   display: flex;
   justify-content: space-between;
 
@@ -93,11 +93,8 @@
 }
 
 .info {
-  // position: relative;
-  // left: 10rem;
   min-width: 24;
   max-width: 28rem;
-  // flex: 3 30%;
   margin-left: 3rem;
 
   @include respond(tab-port) {

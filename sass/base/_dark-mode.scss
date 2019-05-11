@@ -1,19 +1,10 @@
-.t--dark:not(.social__image),
+.t--dark,
 video {
   background-color: $color-black;
   filter: invert(100%);
   transition: all 750ms;
 
-  &-img {
+  &-img:not(.no-filter) {
     filter: invert(100%);
   }
 }
-
-// * {
-//   background-color: inherit;
-// }
-
-// &:not([src*=".svg"]),
-// video {
-//   filter: invert(100%);
-// }

@@ -26,7 +26,6 @@
 
   .image {
     width: 80%;
-    height: 80%;
     object-fit: contain;
 
     @include respond(phone) {

@@ -186,13 +186,13 @@ body {
 .highlight {
   background-color: #c4c4c4; }
 
-.t--dark:not(.social__image),
+.t--dark,
 video {
   background-color: #111111;
   filter: invert(100%);
   transition: all 750ms; }
-  .t--dark:not(.social__image)-img,
-  video-img {
+  .t--dark-img:not(.no-filter),
+  video-img:not(.no-filter) {
     filter: invert(100%); }
 
 .btn {
@@ -480,7 +480,6 @@ video {
     flex-direction: row-reverse; }
   .project .image {
     width: 80%;
-    height: 80%;
     object-fit: contain; }
     @media only screen and (max-width: 37.5em) {
       .project .image {

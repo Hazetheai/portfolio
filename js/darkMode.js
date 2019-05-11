@@ -9,7 +9,7 @@ const button = [...document.querySelectorAll("button")];
 const input = [...document.querySelectorAll("input")];
 const textarea = [...document.querySelectorAll("textarea")];
 
-const img = document.querySelector("img");
+const img = [...document.querySelectorAll("img")];
 
 let textElems = [input, button, textarea];
 
@@ -22,12 +22,12 @@ const bodyTxtDark = () => {
   if (darkTheme == false) {
     body.classList.add("t--dark");
     body.style.color = "#653e22";
-    img.classList.add("t--dark-img");
+    img.forEach(im => im.classList.add("t--dark-img"));
 
     return (darkTheme = true);
   } else body.style.color = "#333";
   body.classList.remove("t--dark");
-  img.classList.remove("t--dark-img");
+  img.forEach(im => im.classList.remove("t--dark-img"));
   return (darkTheme = false);
 };
 

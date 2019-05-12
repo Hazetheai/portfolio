@@ -296,43 +296,23 @@ video {
 .form {
   display: flex;
   flex: 5 80%;
-  background-color: inherit; }
-  .form__label {
+  background-color: inherit;
+  flex-direction: column;
+  margin-bottom: 4rem; }
+  .form__element {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+    justify-content: stretch;
+    align-items: baseline;
     background-color: inherit;
     font-size: 1.3rem; }
     @media only screen and (max-width: 37.5em) {
-      .form__label {
-        padding-right: 2rem;
-        margin-left: -6rem; } }
-    .form__label--name {
-      margin-top: 0.3rem;
-      background-color: inherit; }
-    .form__label--email {
-      margin: 2rem 0 0 0;
-      background-color: inherit; }
-    .form__label--message {
-      margin: 2rem 0 auto 0;
-      background-color: inherit; }
-  .form__input {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    width: 100%;
-    padding-left: 2rem;
-    background-color: #d9e1e4;
-    background-color: inherit; }
-    @media only screen and (max-width: 37.5em) {
-      .form__input {
-        width: 85%;
-        padding: 0; } }
-    .form__input--name {
+      .form__element {
+        flex-wrap: wrap;
+        justify-content: center; } }
+    .form__element--input {
       display: block;
-      width: 50%;
-      margin: 0 0 2rem 0;
-      padding: 0.8rem 0 0 0;
+      width: 90%;
+      margin: 0 0 2rem auto;
       border: none;
       border-bottom: 0.5px solid #c4c4c4;
       outline: none;
@@ -340,32 +320,28 @@ video {
       background-color: #d9e1e4;
       background-color: inherit;
       font-size: 1.3rem; }
-    .form__input--email {
-      display: block;
-      width: 50%;
-      margin: 0 0 1.2rem 0;
-      padding: 0.8rem 0 0 0;
-      border: none;
-      border-bottom: 0.5px solid #c4c4c4;
-      outline: none;
-      font-family: inherit;
-      background-color: #d9e1e4;
-      background-color: inherit;
-      font-size: 1.3rem; }
-    .form__input--textarea {
+      @media only screen and (max-width: 37.5em) {
+        .form__element--input {
+          width: 100%;
+          margin: 2rem auto; } }
+    .form__element--textarea {
       background-attachment: local;
       background-image: linear-gradient(to right, transparent -1rem, transparent 1rem), linear-gradient(to left, transparent -1rem, transparent 1rem), repeating-linear-gradient(transparent, transparent 3rem, #c4c4c4 3rem, #c4c4c4 3.1rem, transparent 3.1rem);
       line-height: 3.1rem;
-      margin: 0 0 2rem 0;
-      padding: 0.8rem 0rem;
+      margin: -1rem 0 2rem auto;
+      width: 90%;
+      padding: 1.8rem 0rem;
       border: none;
       resize: none;
       outline: none;
       font-family: inherit;
       background-color: inherit;
       font-size: 1.3rem; }
+      @media only screen and (max-width: 37.5em) {
+        .form__element--textarea {
+          width: 100%; } }
     @media only screen and (max-width: 37.5em) {
-      .form__input--btn {
+      .form__element--btn {
         width: 100%; } }
 
 .contact {

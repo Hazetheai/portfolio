@@ -59,37 +59,39 @@
         <section class="contact">
           <!-- <div class="form"> -->
           <form class="form" action="">
-            <div class="form__label">
-              <label class="form__label--name" for="name">Name:</label>
-              <label class="form__label--email" for="email">Email:</label>
-              <label class="form__label--message" for="textarea"
-                >Message:</label
-              >
+            <div class="form__element">
+              <label class="form__element--label" for="name">Name:</label>
+              <input
+              class="form__element--input"
+              type="text"
+              name="name"
+              id="Name"
+            />   
             </div>
-            <div class="form__input">
+            <div class="form__element">
+              <label class="form__element--label" for="email">Email:</label>
               <input
-                class="form__input--name"
-                type="text"
-                name="name"
-                id="Name"
-              />
-              <input
-                class="form__input--email"
+                class="form__element--input"
                 type="email"
                 name="email"
                 id="Email"
               />
-              <textarea
-                class="form__input--textarea"
-                name="message"
-                id="Message"
-                cols="30"
-                rows="3"
-              ></textarea>
-              <button class="form__input--btn btn" type="submit">
-                Send &#9993;
-              </button>
             </div>
+            <div class="form__element">
+              <label class="form__element--label" for="textarea"
+                  >Message:</label
+              >
+              <textarea
+                  class="form__element--textarea"
+                  name="message"
+                  id="Message"
+                  cols="30"
+                  rows="3"
+              ></textarea>
+              </div>
+              <button class="form__element--btn btn" type="submit">
+                  Send &#9993;
+              </button>
           </form>
           <!-- </div> -->
 

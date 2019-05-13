@@ -7,4 +7,8 @@ video {
   &-img:not(.no-filter) {
     filter: invert(100%);
   }
+
+  &-txt {
+    color: #653e22;
+  }
 }

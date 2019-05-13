@@ -30,8 +30,17 @@
       }
     }
 
+    //     input:-webkit-autofill,
+    // input:-webkit-autofill:hover,
+    // input:-webkit-autofill:focus,
+    // textarea:-webkit-autofill,
+    // textarea:-webkit-autofill:hover,
+    // textarea:-webkit-autofill:focus,
+
     &--input,
     &--input-webkit-autofill,
+    &--input-webkit-autofill:hover,
+    &--input-webkit-autofill:focus,
     &--input-autofill {
       -webkit-animation-name: autofill;
       -webkit-animation-fill-mode: both;
@@ -40,12 +49,13 @@
       margin: 0 auto 2rem 0;
       // padding: 0.8rem 0;
       border: none;
-      border-bottom: 0.5px solid $color-grey-dark-1;
+      border-bottom: 1px solid $color-grey-dark-1;
       outline: none;
       font-family: inherit;
       background-color: inherit;
       font-size: $default-font-size;
       overflow: hidden;
+      color: inherit;
 
       @include respond(phone) {
         width: 100%;
@@ -53,7 +63,10 @@
       }
     }
 
-    &--textarea {
+    &--textarea,
+    &--textarea-webkit-autofill,
+    &--textarea-webkit-autofill:hover,
+    &--textarea-webkit-autofill:focus {
       background-attachment: local;
       background-image: linear-gradient(
           to right,
@@ -63,10 +76,10 @@
         linear-gradient(to left, $color-transparent -10px, transparent -10px),
         repeating-linear-gradient(
           $color-transparent,
-          $color-transparent 30px,
-          $color-grey-dark-1 30px,
+          $color-transparent 31px,
           $color-grey-dark-1 31px,
-          $color-transparent 31px
+          $color-grey-dark-1 32px,
+          $color-transparent 32px
         );
       line-height: 31px;
       margin: 0 0 2rem auto;

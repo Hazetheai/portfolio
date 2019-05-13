@@ -5,13 +5,13 @@
 // const span = [...document.querySelectorAll("span")];
 // const link = [...document.querySelectorAll("a")];
 
-const button = [...document.querySelectorAll("button")];
 const input = [...document.querySelectorAll("input")];
+const button = [...document.querySelectorAll("button")];
 const textarea = [...document.querySelectorAll("textarea")];
 
 const img = [...document.querySelectorAll("img")];
 
-let textElems = [input, button, textarea];
+let textElems = [input, button, textarea].flat();
 
 const body = document.querySelector("body");
 
@@ -31,14 +31,12 @@ const bodyTxtDark = () => {
   return (darkTheme = false);
 };
 
-const otherTextDark = el => {
-  el.forEach(elem =>
-    elem.forEach(element => {
-      if (darkTheme == false) {
-        element.style.color = "#653e22";
-      } else element.style.color = "#333";
-    })
-  );
+const otherTextDark = arr => {
+  arr.forEach(elem => {
+    if (darkTheme === false) {
+      elem.classList.add("t--dark-txt");
+    } else elem.classlist.remove("t--dark-txt");
+  });
 };
 
 const dev = document.querySelector(".dev");

@@ -42,9 +42,16 @@
   }
 }
 
+@keyframes autofill {
+  to {
+    color: inherit;
+    background: transparent;
+  }
+}
+
 @-webkit-keyframes autofill {
   to {
-    color: $color-grey-dark-3;
+    color: inherit;
     background: transparent;
   }
 }

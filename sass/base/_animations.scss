@@ -41,3 +41,10 @@
     transform: translate(0);
   }
 }
+
+@-webkit-keyframes autofill {
+  to {
+    color: $color-grey-dark-3;
+    background: transparent;
+  }
+}

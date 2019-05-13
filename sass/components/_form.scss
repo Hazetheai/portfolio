@@ -4,30 +4,47 @@
   background-color: inherit;
   flex-direction: column;
   margin-bottom: 4rem;
+  overflow: hidden;
 
   &__element {
     display: flex;
-    justify-content: stretch;
+    justify-content: flex-start;
     align-items: baseline;
     background-color: inherit;
     font-size: $smaller-font-size;
+    overflow: hidden;
 
     @include respond(phone) {
       flex-wrap: wrap;
       justify-content: center;
     }
 
-    &--input {
+    &--label {
+      min-width: 10%;
+      overflow: hidden;
+
+      &-txt {
+        position: relative;
+        top: 1.1rem;
+        overflow: hidden;
+      }
+    }
+
+    &--input,
+    &--input-webkit-autofill {
+      -webkit-animation-name: autofill;
+      -webkit-animation-fill-mode: both;
       display: block;
-      width: 90%;
-      margin: 0 0 2rem auto;
+      width: 40%;
+      margin: 0 auto 2rem 0;
+      // padding: 0.8rem 0;
       border: none;
       border-bottom: 0.5px solid $color-grey-dark-1;
       outline: none;
       font-family: inherit;
-      background-color: $color-grey-light-2;
       background-color: inherit;
       font-size: $smaller-font-size;
+      overflow: hidden;
 
       @include respond(phone) {
         width: 100%;
@@ -40,20 +57,20 @@
       background-image: linear-gradient(
           to right,
           $color-transparent -1rem,
-          transparent 1rem
+          transparent 10px
         ),
-        linear-gradient(to left, $color-transparent -1rem, transparent 1rem),
+        linear-gradient(to left, $color-transparent -10px, transparent -10px),
         repeating-linear-gradient(
           $color-transparent,
-          $color-transparent 3rem,
-          $color-grey-dark-1 3rem,
-          $color-grey-dark-1 3.1rem,
-          $color-transparent 3.1rem
+          $color-transparent 30px,
+          $color-grey-dark-1 30px,
+          $color-grey-dark-1 31px,
+          $color-transparent 31px
         );
-      line-height: 3.1rem;
-      margin: -1rem 0 2rem auto;
+      line-height: 31px;
+      margin: 0 0 2rem auto;
       width: 90%;
-      padding: 1.8rem 0rem;
+      padding: 8px 0rem;
       border: none;
       // max-width: 70vw;
       resize: none;
@@ -61,6 +78,7 @@
       font-family: inherit;
       background-color: inherit;
       font-size: $smaller-font-size;
+      overflow: hidden;
 
       @include respond(phone) {
         width: 100%;

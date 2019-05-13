@@ -310,7 +310,7 @@ video {
     justify-content: flex-start;
     align-items: baseline;
     background-color: inherit;
-    font-size: 1.3rem;
+    font-size: 1.6rem;
     overflow: hidden; }
     @media only screen and (max-width: 37.5em) {
       .form__element {
@@ -323,7 +323,7 @@ video {
         position: relative;
         top: 1.1rem;
         overflow: hidden; }
-    .form__element--input, .form__element--input-webkit-autofill {
+    .form__element--input, .form__element--input-webkit-autofill, .form__element--input-autofill {
       -webkit-animation-name: autofill;
       -webkit-animation-fill-mode: both;
       display: block;
@@ -334,10 +334,10 @@ video {
       outline: none;
       font-family: inherit;
       background-color: inherit;
-      font-size: 1.3rem;
+      font-size: 1.6rem;
       overflow: hidden; }
       @media only screen and (max-width: 37.5em) {
-        .form__element--input, .form__element--input-webkit-autofill {
+        .form__element--input, .form__element--input-webkit-autofill, .form__element--input-autofill {
           width: 100%;
           margin: 2rem auto; } }
     .form__element--textarea {
@@ -352,7 +352,7 @@ video {
       outline: none;
       font-family: inherit;
       background-color: inherit;
-      font-size: 1.3rem;
+      font-size: 1.6rem;
       overflow: hidden; }
       @media only screen and (max-width: 37.5em) {
         .form__element--textarea {

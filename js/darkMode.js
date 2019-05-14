@@ -34,8 +34,8 @@ const bodyTxtDark = () => {
 const otherTextDark = arr => {
   arr.forEach(elem => {
     if (darkTheme === false) {
-      elem.classList.add("t--dark-txt");
-    } else elem.classlist.remove("t--dark-txt");
+      elem.style.color = "#653e22";
+    } else elem.style.color = "#333";
   });
 };
 

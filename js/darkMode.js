@@ -18,16 +18,19 @@ const body = document.querySelector("body");
 let darkTheme = false;
 
 const bodyTxtDark = () => {
+  //fire fn to change color of form txt
   otherTextDark(textElems);
   if (darkTheme == false) {
+    //if dark theme inactive make necessary additions + changes and change value of theme
     body.classList.add("t--dark");
     body.style.color = "#653e22";
     img.forEach(im => im.classList.add("t--dark-img"));
-
+    localStorage.setItem("theme", "dark");
     return (darkTheme = true);
   } else body.style.color = "#333";
   body.classList.remove("t--dark");
   img.forEach(im => im.classList.remove("t--dark-img"));
+  localStorage.removeItem("theme", "dark");
   return (darkTheme = false);
 };
 
@@ -38,6 +41,18 @@ const otherTextDark = arr => {
     } else elem.style.color = "#333";
   });
 };
+
+const currentTheme = localStorage.getItem("theme")
+  ? localStorage.getItem("theme")
+  : null;
+
+if (currentTheme) {
+  document.body.classList.add("t--dark", currentTheme);
+
+  if (currentTheme == "dark") {
+    darkTheme = true;
+  }
+}
 
 const dev = document.querySelector(".dev");
 dev.addEventListener("click", bodyTxtDark);

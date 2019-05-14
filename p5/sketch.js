@@ -9,9 +9,9 @@ var slidVal;
 function setup() {
   canvas = createCanvas(windowWidth, windowHeight);
   canvas.position(0, 0);
-  canvas.style("z-index", 0);
-  canvas.style("opacity", 0);
-  canvas.style("pointer-events", "none");
+  canvas.style("z-index", -1);
+  canvas.style("opacity", 1);
+  // canvas.style("pointer-events", "none");
 
   bg = color("#f7f7f7");
 
@@ -38,7 +38,7 @@ function windowResized() {
 
 function draw() {
   slidVal = opacitySlider.value();
-  canvas.style("opacity", slidVal);
+  // canvas.style("opacity", slidVal);
   background(bg, [0]);
   for (let boid of flock) {
     boid.edges();
@@ -70,6 +70,7 @@ const handleBoids = () => {
 
 const addBoids = () => {
   // console.log("Draggin");
+  if (flock.length > 100) return;
   flock.push(new Boid(mouseX, mouseY));
 };
 

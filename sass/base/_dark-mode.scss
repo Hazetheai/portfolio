@@ -12,3 +12,20 @@ video {
     color: #653e22;
   }
 }
+
+@media (prefers-color-scheme: dark) {
+  .t--dark,
+  video {
+    background-color: $color-black;
+    filter: invert(100%);
+    transition: all 750ms;
+
+    &-img:not(.no-filter) {
+      filter: invert(100%);
+    }
+
+    &-txt {
+      color: #653e22;
+    }
+  }
+}

@@ -146,6 +146,10 @@ body {
     letter-spacing: 1.5rem;
     animation: moveInLeft 0.7s ease-in-out;
     /* animation-delay: 3s; */ }
+    @media screen and (prefers-reduced-motion: reduce) {
+      .heading-primary--main {
+        transition: none;
+        animation: none; } }
     @media only screen and (max-width: 37.5em) {
       .heading-primary--main {
         letter-spacing: 1rem;
@@ -156,6 +160,10 @@ body {
     font-weight: 700;
     letter-spacing: 0.35rem;
     animation: moveInRight 0.7s ease-in-out; }
+    @media screen and (prefers-reduced-motion: reduce) {
+      .heading-primary--sub {
+        transition: none;
+        animation: none; } }
     @media only screen and (max-width: 37.5em) {
       .heading-primary--sub {
         letter-spacing: 0.5rem; } }
@@ -207,6 +215,19 @@ video {
   .t--dark-txt,
   video-txt {
     color: #653e22; }
+
+@media (prefers-color-scheme: dark) {
+  .t--dark,
+  video {
+    background-color: #111111;
+    filter: invert(100%);
+    transition: all 750ms; }
+    .t--dark-img:not(.no-filter),
+    video-img:not(.no-filter) {
+      filter: invert(100%); }
+    .t--dark-txt,
+    video-txt {
+      color: #653e22; } }
 
 .btn {
   border-radius: 1rem;

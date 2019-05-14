@@ -13,7 +13,7 @@ const img = [...document.querySelectorAll("img")];
 
 let textElems = [input, button, textarea].flat();
 
-const body = document.querySelector("body");
+const body = document.querySelector("html");
 
 let darkTheme = false;
 
@@ -21,12 +21,15 @@ const bodyTxtDark = () => {
   //fire fn to change color of form txt
   otherTextDark(textElems);
   if (darkTheme == false) {
-    //if dark theme inactive make necessary additions + changes and change value of theme
+    //if dark theme inactive make necessary changes
     body.classList.add("t--dark");
     body.style.color = "#653e22";
     img.forEach(im => im.classList.add("t--dark-img"));
+    // add to local storage
     localStorage.setItem("theme", "dark");
+    //change value of theme
     return (darkTheme = true);
+    // if dark theme is already active, deactivate
   } else body.style.color = "#333";
   body.classList.remove("t--dark");
   img.forEach(im => im.classList.remove("t--dark-img"));
@@ -34,6 +37,7 @@ const bodyTxtDark = () => {
   return (darkTheme = false);
 };
 
+//fn to change color of form txt
 const otherTextDark = arr => {
   arr.forEach(elem => {
     if (darkTheme === false) {
@@ -47,7 +51,7 @@ const currentTheme = localStorage.getItem("theme")
   : null;
 
 if (currentTheme) {
-  document.body.classList.add("t--dark", currentTheme);
+  bodyTxtDark();
 
   if (currentTheme == "dark") {
     darkTheme = true;

@@ -8,5 +8,3 @@ projectNav.addEventListener("click", () =>
     inline: "nearest"
   })
 );
-
-// window.addEventListener("scroll", () => console.log(pageYOffset));

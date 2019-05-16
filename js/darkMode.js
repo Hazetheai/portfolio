@@ -13,25 +13,27 @@ const img = [...document.querySelectorAll("img")];
 
 let textElems = [input, button, textarea].flat();
 
-const body = document.querySelector("html");
+// const tDark = document.querySelector(".t--dark");
+
+const htm = document.querySelector("html");
 
 let darkTheme = false;
 
-const bodyTxtDark = () => {
+const htmTxtDark = () => {
   //fire fn to change color of form txt
   otherTextDark(textElems);
   if (darkTheme == false) {
     //if dark theme inactive make necessary changes
-    body.classList.add("t--dark");
-    body.style.color = "#653e22";
+    htm.classList.add("t--dark");
+    htm.style.color = "#653e22";
     img.forEach(im => im.classList.add("t--dark-img"));
     // add to local storage
     localStorage.setItem("theme", "dark");
     //change value of theme
     return (darkTheme = true);
     // if dark theme is already active, deactivate
-  } else body.style.color = "#333";
-  body.classList.remove("t--dark");
+  } else htm.style.color = "#333";
+  htm.classList.remove("t--dark");
   img.forEach(im => im.classList.remove("t--dark-img"));
   localStorage.removeItem("theme", "dark");
   return (darkTheme = false);
@@ -51,12 +53,17 @@ const currentTheme = localStorage.getItem("theme")
   : null;
 
 if (currentTheme) {
-  bodyTxtDark();
+  htmTxtDark();
 
   if (currentTheme == "dark") {
+    document.styleSheets[0].cssRules[42].cssText.replace(
+      /all\s750ms/,
+      "all 0ms"
+    );
+
     darkTheme = true;
   }
 }
 
 const dev = document.querySelector(".dev");
-dev.addEventListener("click", bodyTxtDark);
+dev.addEventListener("click", htmTxtDark);

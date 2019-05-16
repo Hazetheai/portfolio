@@ -3,6 +3,9 @@ video {
   background-color: $color-black;
   filter: invert(100%);
   transition: all 750ms;
+  & > * {
+    color: #653e22;
+  }
 
   &-img:not(.no-filter) {
     filter: invert(100%);
@@ -14,8 +17,7 @@ video {
 }
 
 @media (prefers-color-scheme: dark) {
-  .t--dark,
-  video {
+  body {
     background-color: $color-black;
     filter: invert(100%);
     transition: all 750ms;

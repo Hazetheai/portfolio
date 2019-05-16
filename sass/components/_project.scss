@@ -27,6 +27,7 @@
   .image {
     width: 80%;
     object-fit: contain;
+    cursor: pointer;
 
     @include respond(phone) {
       width: 100%;

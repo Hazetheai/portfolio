@@ -216,6 +216,9 @@ video {
   background-color: #111111;
   filter: invert(100%);
   transition: all 750ms; }
+  .t--dark > *,
+  video > * {
+    color: #653e22; }
   .t--dark-img:not(.no-filter),
   video-img:not(.no-filter) {
     filter: invert(100%); }
@@ -224,16 +227,13 @@ video {
     color: #653e22; }
 
 @media (prefers-color-scheme: dark) {
-  .t--dark,
-  video {
+  body {
     background-color: #111111;
     filter: invert(100%);
     transition: all 750ms; }
-    .t--dark-img:not(.no-filter),
-    video-img:not(.no-filter) {
+    body-img:not(.no-filter) {
       filter: invert(100%); }
-    .t--dark-txt,
-    video-txt {
+    body-txt {
       color: #653e22; } }
 
 .btn {
@@ -285,7 +285,8 @@ video {
 
 .nav {
   flex: 2 10%;
-  margin: 0 2rem; }
+  margin: 0 2rem;
+  z-index: 1; }
   @media only screen and (max-width: 37.5em) {
     .nav {
       order: -1;
@@ -510,7 +511,8 @@ video {
     flex-direction: row-reverse; }
   .project .image {
     width: 80%;
-    object-fit: contain; }
+    object-fit: contain;
+    cursor: pointer; }
     @media only screen and (max-width: 37.5em) {
       .project .image {
         width: 100%; } }

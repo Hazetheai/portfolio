@@ -50,6 +50,7 @@
 .nav {
   flex: 2 10%;
   margin: 0 2rem;
+  z-index: 1;
 
   @include respond(phone) {
     order: -1;

@@ -2,7 +2,7 @@
   border-radius: 1rem;
   background-color: $color-grey-dark-2;
   padding: 1rem;
-  margin-left: auto;
+  margin: 0.5rem 0.5rem 0.5rem auto;
   outline: none;
   cursor: pointer;
 
@@ -10,5 +10,11 @@
   :focus {
     transform: scale(0.9);
     box-shadow: $box-shadow;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+    opacity: 1;
+    transition: all 300ms;
   }
 }

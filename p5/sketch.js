@@ -82,6 +82,7 @@ function mouseDragged() {
 
 cCoder.addEventListener("mouseover", handleBoids);
 cCoder.addEventListener("touchend", handleBoids);
+// cCoder.addEventListener("click", handleBoids);
 
 // document.addEventListener("mousedown", mouseDrag);
 // cCoder.addEventListener("mouseover", handleBoids);

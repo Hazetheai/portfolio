@@ -1,8 +1,21 @@
 .projects {
+  &__header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 4rem;
+  }
 }
 
 .p-wrapper {
-  padding-top: 4rem;
+  // padding-top: 4rem;
   display: block;
   background-color: $color-grey-light-3;
+  // background: linear-gradient(
+  //   164.75deg,
+  //   rgba(247, 247, 247, 0.7) 33.16%,
+  //   rgba(213, 218, 223, 0.7) 37.43%,
+  //   rgba(213, 218, 223, 0.7) 55.33%,
+  //   rgba(255, 255, 255, 0.7) 65.61%
+  // );
 }

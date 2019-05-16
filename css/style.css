@@ -28,6 +28,7 @@
   box-sizing: inherit; }
 
 html {
+  transition: filter 850ms ease-in-out;
   font-size: 62.5%; }
   @media only screen and (max-width: 75em) {
     html {
@@ -213,7 +214,6 @@ body {
 
 .t--dark,
 video {
-  background-color: #111111;
   filter: invert(100%);
   transition: all 750ms; }
   .t--dark > *,
@@ -221,39 +221,57 @@ video {
     color: #653e22; }
   .t--dark-img:not(.no-filter),
   video-img:not(.no-filter) {
-    filter: invert(100%); }
+    filter: invert(100%);
+    border: none;
+    mix-blend-mode: hard-light;
+    opacity: 0.8;
+    border-radius: 3px;
+    padding: 1rem; }
+    .t--dark-img:not(.no-filter):hover,
+    video-img:not(.no-filter):hover {
+      border: 3px solid #f0ffff;
+      mix-blend-mode: normal;
+      transform: scale(1.05);
+      opacity: 1;
+      transition: all 300ms; }
   .t--dark-txt,
   video-txt {
     color: #653e22; }
 
 @media (prefers-color-scheme: dark) {
-  body {
-    background-color: #111111;
+  html {
     filter: invert(100%);
     transition: all 750ms; }
-    body-img:not(.no-filter) {
+    html > * {
+      color: #653e22; }
+    html-img:not(.no-filter) {
       filter: invert(100%); }
-    body-txt {
+    html-txt {
       color: #653e22; } }
 
 .btn {
   border-radius: 1rem;
   background-color: #d5dadf;
   padding: 1rem;
-  margin-left: auto;
+  margin: 0.5rem 0.5rem 0.5rem auto;
   outline: none;
   cursor: pointer; }
   .btn:active,
   .btn :focus {
     transform: scale(0.9);
     box-shadow: 0 1.5em 4rem rgba(17, 17, 17, 0.15); }
+  .btn:hover {
+    transform: scale(1.05);
+    opacity: 1;
+    transition: all 300ms; }
 
 .banner {
   position: relative;
   margin: 0rem 8rem;
   padding: 6rem 5rem 2rem 5rem;
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  z-index: 1; }
   @media only screen and (max-width: 56.25em) {
     .banner {
       flex-wrap: wrap;
@@ -274,9 +292,11 @@ video {
       .name__header {
         margin: 5rem 0 0 0;
         text-align: center; } }
-  @media only screen and (max-width: 37.5em) {
-    .name__tag {
-      text-align: center; } }
+  .name__tag {
+    overflow: hidden; }
+    @media only screen and (max-width: 37.5em) {
+      .name__tag {
+        text-align: center; } }
 
 .dev,
 .design,
@@ -403,7 +423,8 @@ video {
   margin: 0rem 8rem;
   display: flex;
   justify-content: space-between;
-  background-color: transparent; }
+  background-color: transparent;
+  z-index: 1; }
   @media only screen and (max-width: 56.25em) {
     .contact {
       flex-wrap: wrap;
@@ -506,9 +527,16 @@ video {
       flex-wrap: wrap;
       padding: 0;
       margin: 0rem 4rem; } }
-  .project:nth-child(2) {
+  .project:nth-child(even) {
     background-color: #f7f7f7;
     flex-direction: row-reverse; }
+  .project__buttons {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%; }
+  .project__button--code, .project__button--site {
+    padding: 1rem; }
   .project .image {
     width: 80%;
     object-fit: contain;
@@ -522,6 +550,10 @@ video {
     margin: 2rem 1rem;
     display: flex;
     justify-content: center; }
+    .project__image:hover {
+      transform: scale(1.05);
+      opacity: 1;
+      transition: all 300ms; }
     .project__image--link {
       display: flex;
       justify-content: center;
@@ -545,7 +577,7 @@ video {
         .project__info-item {
           flex-wrap: wrap; } }
       .project__info-item--title {
-        width: 10rem;
+        width: 11rem;
         margin: 0.3rem;
         padding: 0.2rem;
         font-weight: 700;
@@ -569,7 +601,12 @@ video {
 .g-wrapper {
   background: linear-gradient(164.75deg, rgba(247, 247, 247, 0.7) 33.16%, rgba(213, 218, 223, 0.7) 37.43%, rgba(213, 218, 223, 0.7) 55.33%, rgba(255, 255, 255, 0.7) 65.61%); }
 
+.projects__header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 4rem; }
+
 .p-wrapper {
-  padding-top: 4rem;
   display: block;
   background-color: #f4f6f7; }

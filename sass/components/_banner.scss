@@ -4,6 +4,7 @@
   padding: 6rem 5rem 2rem 5rem;
   display: flex;
   justify-content: space-between;
+  z-index: 1;
 
   // @include scroll;
 
@@ -35,6 +36,8 @@
   }
 
   &__tag {
+    overflow: hidden;
+
     @include respond(phone) {
       text-align: center;
     }

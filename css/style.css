@@ -281,6 +281,17 @@ video {
       padding-top: 3rem;
       margin: 0 5rem; } }
 
+.js-emailcopybtn {
+  border: none;
+  background-color: transparent; }
+  @media only screen and (max-width: 37.5em) {
+    .js-emailcopybtn {
+      margin-top: 5rem; } }
+
+.js-emaillink {
+  text-decoration: none;
+  color: #333333; }
+
 .name {
   flex: 4 55%; }
   .name__header {
@@ -597,6 +608,42 @@ video {
 
 .gib {
   text-decoration: line-through; }
+
+.tooltip {
+  margin-left: 2rem;
+  position: relative;
+  display: inline-block; }
+  @media only screen and (max-width: 37.5em) {
+    .tooltip {
+      margin-top: 8rem; } }
+  .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 96%;
+    /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
+    opacity: 0;
+    transition: all 1s; }
+    .tooltiptext::after {
+      content: " ";
+      position: absolute;
+      top: 50%;
+      right: 100%;
+      /* To the left of the tooltip */
+      margin-top: -5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: transparent black transparent transparent; }
+
+.showtip {
+  visibility: visible;
+  opacity: 1; }
 
 .g-wrapper {
   background: linear-gradient(164.75deg, rgba(247, 247, 247, 0.7) 33.16%, rgba(213, 218, 223, 0.7) 37.43%, rgba(213, 218, 223, 0.7) 55.33%, rgba(255, 255, 255, 0.7) 65.61%); }

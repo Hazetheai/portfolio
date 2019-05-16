@@ -267,8 +267,8 @@ video {
 
 .banner {
   position: relative;
-  margin: 0rem 8rem;
-  padding: 6rem 5rem 2rem 5rem;
+  margin: 5rem 8rem 0;
+  padding: 1rem 5rem 2rem;
   display: flex;
   justify-content: space-between;
   z-index: 1; }
@@ -443,6 +443,16 @@ video {
     @media only screen and (max-width: 37.5em) {
       .form__element--btn {
         width: 100%; } }
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100vw;
+  padding: 1rem;
+  background-color: #111111;
+  box-shadow: 0 1.5em 4rem rgba(17, 17, 17, 0.15);
+  color: #f7f7f7; }
 
 .contact {
   margin: 0rem 8rem;

@@ -1,0 +1,11 @@
+.footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100vw;
+  //   margin: 1.5rem 2rem;
+  padding: 1rem;
+  background-color: $color-black;
+  box-shadow: $box-shadow;
+  color: $color-text-light;
+}

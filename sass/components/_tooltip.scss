@@ -2,24 +2,34 @@
   margin-left: 2rem;
   position: relative;
   display: inline-block;
+  font-family: "Inconsolata", monospace;
 
   @include respond(phone) {
     margin-top: 8rem;
   }
   //   border-bottom: 1px dotted black;
   &text {
-    visibility: hidden;
+    // visibility: hidden;
     width: 120px;
     background-color: black;
     color: #fff;
     text-align: center;
     border-radius: 6px;
-    padding: 5px 0;
-    position: absolute;
+    padding: 7px 4px;
+    position: relative;
     z-index: 1;
-    bottom: 96%;
-    // left: 50%;
-    // margin-left: -60px;
+    top: 0;
+    left: 0;
+
+    @include respond(tab-land) {
+      top: 0;
+      left: 0;
+    }
+
+    @include respond(phone) {
+      top: 3rem;
+      left: -16rem;
+    }
 
     &::after {
       content: " ";
@@ -29,11 +39,20 @@
       margin-top: -5px;
       border-width: 5px;
       border-style: solid;
-      border-color: transparent black transparent transparent;
+      border-color: transparent $color-black transparent transparent;
+
+      @include respond(phone) {
+        top: -25%;
+        left: 50%;
+        margin: -3px 0 0 -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: transparent transparent $color-black transparent;
+      }
     }
 
     /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
-    opacity: 0;
+    // opacity: 0;
     transition: all 1s;
   }
 }

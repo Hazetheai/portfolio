@@ -281,6 +281,19 @@ video {
       padding-top: 3rem;
       margin: 0 5rem; } }
 
+.emailaddress {
+  position: absolute;
+  margin-top: -4rem;
+  padding: 1rem; }
+  @media only screen and (max-width: 56.25em) {
+    .emailaddress {
+      margin-top: -7rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .emailaddress {
+      position: fixed;
+      margin-top: -3rem;
+      left: 0; } }
+
 .js-emailcopybtn {
   border: none;
   background-color: transparent; }
@@ -290,7 +303,8 @@ video {
 
 .js-emaillink {
   text-decoration: none;
-  color: #333333; }
+  color: #333333;
+  font-family: "Inconsolata", monospace; }
 
 .name {
   flex: 4 55%; }
@@ -612,24 +626,32 @@ video {
 .tooltip {
   margin-left: 2rem;
   position: relative;
-  display: inline-block; }
+  display: inline-block;
+  font-family: "Inconsolata", monospace; }
   @media only screen and (max-width: 37.5em) {
     .tooltip {
       margin-top: 8rem; } }
   .tooltiptext {
-    visibility: hidden;
     width: 120px;
     background-color: black;
     color: #fff;
     text-align: center;
     border-radius: 6px;
-    padding: 5px 0;
-    position: absolute;
+    padding: 7px 4px;
+    position: relative;
     z-index: 1;
-    bottom: 96%;
+    top: 0;
+    left: 0;
     /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
-    opacity: 0;
     transition: all 1s; }
+    @media only screen and (max-width: 75em) {
+      .tooltiptext {
+        top: 0;
+        left: 0; } }
+    @media only screen and (max-width: 37.5em) {
+      .tooltiptext {
+        top: 3rem;
+        left: -16rem; } }
     .tooltiptext::after {
       content: " ";
       position: absolute;
@@ -639,7 +661,15 @@ video {
       margin-top: -5px;
       border-width: 5px;
       border-style: solid;
-      border-color: transparent black transparent transparent; }
+      border-color: transparent #111111 transparent transparent; }
+      @media only screen and (max-width: 37.5em) {
+        .tooltiptext::after {
+          top: -25%;
+          left: 50%;
+          margin: -3px 0 0 -5px;
+          border-width: 5px;
+          border-style: solid;
+          border-color: transparent transparent #111111 transparent; } }
 
 .showtip {
   visibility: visible;

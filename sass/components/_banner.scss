@@ -19,6 +19,22 @@
   }
 }
 
+.emailaddress {
+  position: absolute;
+  margin-top: -4rem;
+  padding: 1rem;
+
+  @include respond(tab-port) {
+    margin-top: -7rem;
+  }
+
+  @include respond(phone) {
+    position: fixed;
+    margin-top: -3rem;
+    left: 0;
+  }
+}
+
 .js-emailcopybtn {
   border: none;
   background-color: $color-transparent;
@@ -30,6 +46,7 @@
 .js-emaillink {
   text-decoration: none;
   color: $color-grey-dark-3;
+  font-family: "Inconsolata", monospace;
 }
 
 .name {

@@ -9,7 +9,6 @@
   }
   //   border-bottom: 1px dotted black;
   &text {
-    visibility: hidden;
     width: 120px;
     background-color: black;
     color: #fff;
@@ -20,6 +19,9 @@
     z-index: 1;
     top: 0;
     left: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 1s;
 
     @include respond(tab-land) {
       top: 0;
@@ -50,10 +52,6 @@
         border-color: transparent transparent $color-black transparent;
       }
     }
-
-    /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
-    opacity: 0;
-    transition: all 1s;
   }
 }
 

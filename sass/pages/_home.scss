@@ -1,7 +1,4 @@
 main {
-}
-
-.g-wrapper {
   background: linear-gradient(
     164.75deg,
     rgba(247, 247, 247, 0.7) 33.16%,
@@ -9,4 +6,15 @@ main {
     rgba(213, 218, 223, 0.7) 55.33%,
     rgba(255, 255, 255, 0.7) 65.61%
   );
+}
+
+.g-wrapper {
+  background-color: $color-transparent;
+  // background: linear-gradient(
+  //   164.75deg,
+  //   rgba(247, 247, 247, 0.7) 33.16%,
+  //   rgba(213, 218, 223, 0.7) 37.43%,
+  //   rgba(213, 218, 223, 0.7) 55.33%,
+  //   rgba(255, 255, 255, 0.7) 65.61%
+  // );
 }

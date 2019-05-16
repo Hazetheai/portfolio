@@ -538,7 +538,7 @@ video {
 .project {
   display: flex;
   max-width: 95vw;
-  background-color: #f4f6f7;
+  background-color: transparent;
   margin: 0rem 8rem;
   padding: 4rem 0;
   align-items: center; }
@@ -553,7 +553,7 @@ video {
       padding: 0;
       margin: 0rem 4rem; } }
   .project:nth-child(even) {
-    background-color: #f7f7f7;
+    background-color: transparent;
     flex-direction: row-reverse; }
   .project__buttons {
     display: flex;
@@ -642,7 +642,8 @@ video {
     z-index: 1;
     top: 0;
     left: 0;
-    /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
+    visibility: hidden;
+    opacity: 0;
     transition: all 1s; }
     @media only screen and (max-width: 75em) {
       .tooltiptext {
@@ -675,15 +676,15 @@ video {
   visibility: visible;
   opacity: 1; }
 
-.g-wrapper {
+main {
   background: linear-gradient(164.75deg, rgba(247, 247, 247, 0.7) 33.16%, rgba(213, 218, 223, 0.7) 37.43%, rgba(213, 218, 223, 0.7) 55.33%, rgba(255, 255, 255, 0.7) 65.61%); }
+
+.g-wrapper {
+  background-color: transparent; }
 
 .projects__header {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 4rem; }
-
-.p-wrapper {
-  display: block;
-  background-color: #f4f6f7; }
+  padding-top: 4rem;
+  background-color: transparent; }

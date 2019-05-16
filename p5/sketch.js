@@ -6,8 +6,10 @@ let alignSlider, cohesionSlider, seperationSlider, opacitySlider;
 let opac = 0;
 var slidVal;
 
+const main = document.querySelector("main");
+
 function setup() {
-  canvas = createCanvas(windowWidth, windowHeight);
+  canvas = createCanvas(main.clientWidth, main.clientHeight);
   canvas.position(0, 0);
   canvas.style("z-index", -1);
   canvas.style("opacity", 1);
@@ -33,7 +35,7 @@ function setup() {
 }
 
 function windowResized() {
-  resizeCanvas(displayWidth, displayHeight);
+  resizeCanvas(main.clientWidth, main.clientHeight);
 }
 
 function draw() {

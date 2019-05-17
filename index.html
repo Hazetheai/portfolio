@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -68,7 +70,7 @@
         </section>
         <section class="contact">
           <!-- <div class="form"> -->
-          <form class="form" action="">
+          <form class="form" action="./php/contact.php">
             <div class="form__element">
               <label class="form__element--label" for="Name">Name:</label>
               <input
@@ -76,6 +78,8 @@
               type="text"
               name="name"
               id="Name"
+              required
+              onfocus="formEnter();"
             />   
             </div>
             <div class="form__element">
@@ -85,6 +89,10 @@
                 type="email"
                 name="email"
                 id="Email"
+                required
+                onchange="formEnter();"
+
+                onfocus="formEnter();"
               />
             </div>
             <div class="form__element">
@@ -97,6 +105,9 @@
                   id="Message"
                   cols="30"
                   rows="3"
+                  onchange="formEnter();"
+                  onfocus="formEnter();"
+
               ></textarea>
               </div>
               <button class="form__element--btn btn" type="submit">
@@ -242,11 +253,12 @@
               All Rights Get Served
             </p></div>
             <div class="footer__container"><p>
-              Copyright © Jake Riordan 2017
+              
             </p></div>
-            <div class="footer__container">Something's afoot here...</div>
+            <div class="footer__container">© Jake Riordan 2019</div>
           </footer>
     </main>
+    <script src="./js/form.js"></script>
     <script src="./js/darkMode.js"></script>
     <script src="./p5/p5.min.js"></script>
     <script src="./p5/p5.dom.min.js"></script>

@@ -29,8 +29,8 @@
     }
 
     @include respond(phone) {
-      top: 3rem;
-      left: -16rem;
+      top: -7rem;
+      left: -1rem;
     }
 
     &::after {

@@ -32,8 +32,10 @@
 
   @include respond(phone) {
     position: fixed;
-    margin-top: -3rem;
+    margin-top: -2rem;
     left: 0;
+    max-width: 16rem;
+    max-height: 9rem;
   }
 }
 

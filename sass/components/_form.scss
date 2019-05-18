@@ -22,11 +22,13 @@
     &--label {
       min-width: 10%;
       overflow: hidden;
+      min-width: 15%;
 
       &-txt {
         position: relative;
         top: 1.1rem;
         overflow: hidden;
+        min-width: 15%;
       }
     }
 

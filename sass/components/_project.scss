@@ -24,22 +24,15 @@
     flex-direction: row-reverse;
   }
 
-  &__buttons {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 100%;
-  }
-
-  &__button--code,
-  &__button--site {
-    padding: 1rem;
+  &__button {
+    cursor: pointer;
   }
 
   .image {
     width: 80%;
     object-fit: contain;
     cursor: pointer;
+    margin-bottom: 1rem;
 
     @include respond(phone) {
       width: 100%;
@@ -47,31 +40,28 @@
   }
 
   &__image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     min-height: 8rem;
     flex: 1 3 33%;
     margin: 2rem 1rem;
     display: flex;
     justify-content: center;
 
-    &:hover {
-      transform: scale(1.05);
-      opacity: 1;
-      transition: all 300ms;
-    }
-
     &--link {
       display: flex;
       justify-content: center;
       align-items: center;
+
+      &:hover {
+        transform: scale(1.05);
+        opacity: 1;
+        transition: all 300ms;
+      }
     }
   }
-
-  // Easy scroll ** TODO **
-
-  //   a[id="projects"]:target ~ #projects {
-  //     -webkit-transform: translateY(0px);
-  //     transform: translateY(0px);
-  //   }
 
   &__info {
     width: 60%;

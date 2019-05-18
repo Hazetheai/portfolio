@@ -254,7 +254,6 @@ video {
   background-color: #d5dadf;
   padding: 1rem;
   margin: 0.5rem 0.5rem 0.5rem auto;
-  outline: none;
   cursor: pointer; }
   .btn:active,
   .btn :focus {
@@ -264,6 +263,20 @@ video {
     transform: scale(1.05);
     opacity: 1;
     transition: all 300ms; }
+  .btn--code {
+    padding: 1rem;
+    border-radius: 1rem;
+    border: 2px solid #333333;
+    background-color: transparent;
+    color: #333333; }
+    .btn--code:hover {
+      transform: scale(1.05);
+      opacity: 1;
+      transition: all 300ms; }
+    .btn--code:active,
+    .btn--code :focus {
+      transform: scale(0.9);
+      box-shadow: 0 1.5em 4rem rgba(17, 17, 17, 0.15); }
 
 .disabled {
   background-color: #c4c4c4;
@@ -417,11 +430,13 @@ video {
         justify-content: center; } }
     .form__element--label {
       min-width: 10%;
-      overflow: hidden; }
+      overflow: hidden;
+      min-width: 15%; }
       .form__element--label-txt {
         position: relative;
         top: 1.1rem;
-        overflow: hidden; }
+        overflow: hidden;
+        min-width: 15%; }
     .form__element--input, .form__element--input-webkit-autofill, .form__element--input-webkit-autofill:hover, .form__element--input-webkit-autofill:focus, .form__element--input-autofill {
       -webkit-animation-name: autofill;
       -webkit-animation-fill-mode: both;
@@ -582,34 +597,34 @@ video {
   .project:nth-child(even) {
     background-color: transparent;
     flex-direction: row-reverse; }
-  .project__buttons {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 100%; }
-  .project__button--code, .project__button--site {
-    padding: 1rem; }
+  .project__button {
+    cursor: pointer; }
   .project .image {
     width: 80%;
     object-fit: contain;
-    cursor: pointer; }
+    cursor: pointer;
+    margin-bottom: 1rem; }
     @media only screen and (max-width: 37.5em) {
       .project .image {
         width: 100%; } }
   .project__image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     min-height: 8rem;
     flex: 1 3 33%;
     margin: 2rem 1rem;
     display: flex;
     justify-content: center; }
-    .project__image:hover {
-      transform: scale(1.05);
-      opacity: 1;
-      transition: all 300ms; }
     .project__image--link {
       display: flex;
       justify-content: center;
       align-items: center; }
+      .project__image--link:hover {
+        transform: scale(1.05);
+        opacity: 1;
+        transition: all 300ms; }
   .project__info {
     width: 60%;
     flex: 3 1 66%;

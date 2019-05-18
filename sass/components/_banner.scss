@@ -47,7 +47,18 @@
   }
 }
 
+.get-email {
+  text-decoration: none;
+  color: $color-grey-dark-3;
+  font-family: "Inconsolata", monospace;
+  cursor: pointer;
+  font-size: $default-font-size;
+}
+
 .js-emaillink {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
   text-decoration: none;
   color: $color-grey-dark-3;
   font-family: "Inconsolata", monospace;

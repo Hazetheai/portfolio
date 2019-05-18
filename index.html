@@ -21,8 +21,8 @@
 
             <div class="emailaddress">
               <button class="js-emailcopybtn ">
-                <a class="js-emaillink" href="#0">contact@jakeriordan.dev
-                </a>
+                <a class="js-emaillink" href="#0">
+                </a><span class="get-email">Get My Email!</span>
               </button>
               <div class="tooltip">
                 <span class="tooltiptext">add to clipboard!</span>
@@ -70,7 +70,7 @@
         </section>
         <section class="contact">
           <!-- <div class="form"> -->
-          <form class="form" action="./php/contact.php">
+          <form class="form" action="POST" data-netlify="true" >
             <div class="form__element">
               <label class="form__element--label" for="Name">Name:</label>
               <input
@@ -109,6 +109,9 @@
                   onfocus="formEnter();"
 
               ></textarea>
+              </div>
+              <div class="field">
+                <div data-netlify-recaptcha="true"></div>
               </div>
               <button class="form__element--btn btn" type="submit">
                   Send 

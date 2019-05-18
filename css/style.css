@@ -308,7 +308,17 @@ video {
     .js-emailcopybtn {
       margin-top: 5rem; } }
 
+.get-email {
+  text-decoration: none;
+  color: #333333;
+  font-family: "Inconsolata", monospace;
+  cursor: pointer;
+  font-size: 1.6rem; }
+
 .js-emaillink {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
   text-decoration: none;
   color: #333333;
   font-family: "Inconsolata", monospace; }

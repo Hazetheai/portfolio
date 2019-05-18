@@ -14,8 +14,8 @@ const poller = () => {
     nextBtn.classList.add("disabled");
 
     return false;
-  } else console.log("true");
-  nextBtn.removeAttribute("disabled");
+  } else nextBtn.removeAttribute("disabled");
+  console.log("true");
   nextBtn.classList.remove("disabled");
 
   formFilled = true;

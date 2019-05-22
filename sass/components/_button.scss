@@ -1,15 +1,10 @@
 .btn {
-  border-radius: 1rem;
-  background-color: $color-grey-dark-2;
   padding: 1rem;
-  margin: 0.5rem 0.5rem 0.5rem auto;
-  cursor: pointer;
-
-  &:active,
-  :focus {
-    transform: scale(0.9);
-    box-shadow: $box-shadow;
-  }
+  border-radius: 1rem;
+  border: 2px solid $color-text-dark;
+  background-color: $color-transparent;
+  color: $color-text-dark;
+  width: 25%;
 
   &:hover {
     transform: scale(1.05);
@@ -17,23 +12,28 @@
     transition: all 300ms;
   }
 
+  &:active,
+  :focus {
+    transform: scale(0.9);
+    box-shadow: $box-shadow;
+  }
   &--code {
-    padding: 1rem;
     border-radius: 1rem;
-    border: 2px solid $color-text-dark;
-    background-color: $color-transparent;
-    color: $color-text-dark;
-
-    &:hover {
-      transform: scale(1.05);
-      opacity: 1;
-      transition: all 300ms;
-    }
+    background-color: $color-grey-dark-2;
+    padding: 1rem;
+    margin: 0.5rem 0.5rem 0.5rem auto;
+    cursor: pointer;
 
     &:active,
     :focus {
       transform: scale(0.9);
       box-shadow: $box-shadow;
+    }
+
+    &:hover {
+      transform: scale(1.05);
+      opacity: 1;
+      transition: all 300ms;
     }
   }
 }

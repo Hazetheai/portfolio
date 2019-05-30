@@ -721,6 +721,24 @@ video {
   visibility: visible;
   opacity: 1; }
 
+.switch-container {
+  position: absolute;
+  top: 1rem;
+  left: 2rem;
+  width: 5vw;
+  box-sizing: border-box; }
+
+.switch {
+  width: 100%;
+  border: 1px solid #111111; }
+  .switch__label {
+    width: 100%;
+    border: 1px solid red;
+    padding: 2rem; }
+  .switch__input:checked + .switch__label {
+    border: 3px solid blue;
+    display: inline; }
+
 main {
   background: linear-gradient(164.75deg, rgba(247, 247, 247, 0.7) 33.16%, rgba(213, 218, 223, 0.7) 37.43%, rgba(213, 218, 223, 0.7) 55.33%, rgba(255, 255, 255, 0.7) 65.61%); }
 

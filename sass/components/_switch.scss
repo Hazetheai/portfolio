@@ -1,26 +1,26 @@
-.switch-container {
-  position: absolute;
-  top: 1rem;
-  left: 2rem;
-  width: 5vw;
-  box-sizing: border-box;
-}
+// .switch-container {
+//   position: absolute;
+//   top: 1rem;
+//   left: 2rem;
+//   width: 5vw;
+//   box-sizing: border-box;
+// }
 
-.switch {
-  width: 100%;
-  border: 1px solid $color-black;
-  &__label {
-    width: 100%;
-    border: 1px solid red;
-    padding: 2rem;
-  }
+// .switch {
+//   width: 100%;
+//   border: 1px solid $color-black;
+//   &__label {
+//     width: 100%;
+//     border: 1px solid red;
+//     padding: 2rem;
+//   }
 
-  &__input {
-    // display: none;
+//   &__input {
+//     // display: none;
 
-    &:checked + .switch__label {
-      border: 3px solid blue;
-      display: inline;
-    }
-  }
-}
+//     &:checked + .switch__label {
+//       border: 3px solid blue;
+//       display: inline;
+//     }
+//   }
+// }

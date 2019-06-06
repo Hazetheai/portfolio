@@ -18,7 +18,12 @@ const cCoder = document.querySelector(".cCoder");
 var restX, restY, vel, drag, strength, currentX, currentY, ballWidth, showText;
 
 const warning1 = `If you keep going, you're going to break it........`;
-const warning2 = `See?......\n This is why you can't have nice things\n Good thing I got a spare bulb around lying around here somewhere... `;
+const warning2 = `See?                            \n This is why you can't have nice things                               
+\n Good thing I got a spare bulb lying around here somewhere......................s `;
+const warning3 = `Dammit.              \nThat's the third bulb this week.`;
+const warning4 = `I told you.         \nBut would you listen         \nOf course not.`;
+
+const warnings = [warning2, warning3, warning4];
 
 let numClicks = 1;
 let dragging,
@@ -100,7 +105,8 @@ function draw() {
     currentY + ballWidth / 2
   );
 
-  strokeWeight(2);
+  strokeWeight(1);
+  textSize(32);
   fill(214, 71, 150);
   ellipse(currentX, currentY, ballWidth);
   ellipseMode(CORNER);
@@ -204,6 +210,10 @@ function mousePressed() {
   }
 }
 
+function randomNum() {
+  return warnings[Math.round(Math.random() * warnings.length)];
+}
+
 function mouseReleased() {
   // Quit dragging
   dragging = false;
@@ -215,9 +225,11 @@ function mouseReleased() {
     htmTxtDark();
     numClicks++;
     // Effects to simulate broken gear.
-
+    if (numClicks == 8) {
+      frameRate(5);
+    }
     if (numClicks % 9 === 0) {
-      typeWriter(warning2, 0, 300, 300, 50);
+      typeWriter(randomNum(), 0, 300, 300, 50);
       canvas.style("z-index", 5);
       canvas.style("pointer-events", "none");
 
@@ -231,11 +243,13 @@ function mouseReleased() {
         canvas.style("pointer-events", "");
         cursor();
         loop();
+        frameRate(60);
+
         handleBoids();
         if (darkTheme === true) {
           htmTxtDark();
         }
-      }, 7000);
+      }, 9000);
     }
   }
 }

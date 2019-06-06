@@ -15,8 +15,9 @@ const cCoder = document.querySelector(".cCoder");
 
 // ======================= Switch Vars =======================
 
-var restX, restY, vel, drag, strength, currentX, currentY, ballWidth;
+var restX, restY, vel, drag, strength, currentX, currentY, ballWidth, showText;
 
+let numClicks = 0;
 let dragging,
   hover = false;
 
@@ -83,7 +84,6 @@ function draw() {
       boid.render();
     }
   }
-
   //draw our circle
   line(
     20 + ballWidth / 2,
@@ -107,8 +107,9 @@ function draw() {
     mouseY > currentY &&
     mouseY < currentY + ballWidth
   ) {
+    cursor("grab");
     rollover = true;
-    console.log("Rollover Baby!");
+    // console.log("Rollover Baby!");
   } else {
     rollover = false;
   }
@@ -126,7 +127,7 @@ const handleBoids = () => {
     opacitySlider.value(0.2);
     for (let i = 0; i <= 10; i++) {
       addBoids();
-      console.log("working");
+      // console.log("working");
     }
     return (showBoids = true);
   } else if (showBoids == true) {
@@ -182,10 +183,38 @@ function mouseReleased() {
   dragging = false;
   // If the ball has been moved from it's resting place(pulled on) Then reset the values to rest and activate/deactivate Dark Mode
   if (currentY > 279) {
-    console.log(currentY);
+    // console.log(currentY);
     currentX = restX;
     currentY = restY;
     htmTxtDark();
+    numClicks++;
+    if (numClicks % 3 === 0) {
+      // handleBoids();
+      console.log("If you keep going, you're going to break it...");
+      if (numClicks > 1) {
+        console.log(
+          "I told you.\n Damn kids, soon as you tell'em no, they keep going.\n Good thing I got a spare around lying around here somewhere... "
+        );
+        canvas.style("z-index", 5);
+        canvas.style("pointer-events", "none");
+
+        // noLoop();
+        noCursor();
+        if (darkTheme === false) {
+          htmTxtDark();
+        }
+        setTimeout(() => {
+          canvas.style("z-index", 0);
+          canvas.style("pointer-events", "");
+          cursor();
+          // loop();
+          handleBoids();
+          if (darkTheme === true) {
+            htmTxtDark();
+          }
+        }, 6000);
+      }
+    }
   }
 }
 

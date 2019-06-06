@@ -1,4 +1,4 @@
-// Flocking Vars
+// ======================= Boid Vars =======================
 
 const flock = [];
 let canvas;
@@ -11,8 +11,9 @@ let slidVal;
 let socialLinks = [...document.querySelectorAll(".social__list-item")];
 
 const main = document.querySelector("main");
+const cCoder = document.querySelector(".cCoder");
 
-// Switch Vars
+// ======================= Switch Vars =======================
 
 var restX, restY, vel, drag, strength, currentX, currentY, ballWidth;
 
@@ -21,7 +22,10 @@ let dragging,
 
 let offsetX, offsetY;
 
+// ======================= Setup & Draw combining both animations =======================
+
 function setup() {
+  // ======================= Boid
   canvas = createCanvas(main.clientWidth, main.clientHeight);
   canvas.position(0, 0);
   canvas.style("z-index", 0);
@@ -46,14 +50,18 @@ function setup() {
     flock.push(new Boid());
   }
 
+  // ======================= Spring
   vel = 0; // velocity
   restX = 20;
-  restY = 50;
+  restY = 100;
 
   currentX = restX;
   currentY = restY;
   ballWidth = 40;
   ellipse(currentX, currentY, ballWidth);
+
+  drag = 0.75; //need to take some force away, 1 = no drag
+  strength = 0.3; // the "strength" of the spring, out of 1
 }
 
 function windowResized() {
@@ -61,18 +69,10 @@ function windowResized() {
 }
 
 function draw() {
+  // ======================= Boid
   slidVal = opacitySlider.value();
   // canvas.style("opacity", slidVal);
   background(bg, [0]);
-
-  line(
-    20 + ballWidth / 2,
-    50,
-    currentX + ballWidth / 2,
-    currentY + ballWidth / 2
-  );
-
-  strokeWeight(2);
 
   for (let boid of flock) {
     boid.edges();
@@ -85,6 +85,14 @@ function draw() {
   }
 
   //draw our circle
+  line(
+    20 + ballWidth / 2,
+    0,
+    currentX + ballWidth / 2,
+    currentY + ballWidth / 2
+  );
+
+  strokeWeight(2);
   fill(214, 71, 150);
   ellipse(currentX, currentY, ballWidth);
   ellipseMode(CORNER);
@@ -111,7 +119,7 @@ function draw() {
   }
 }
 
-const cCoder = document.querySelector(".cCoder");
+// ======================= Boids =======================
 
 const handleBoids = () => {
   if (showBoids == false) {
@@ -152,10 +160,7 @@ cCoder.addEventListener("touchend", handleBoids);
 // document.addEventListener("mousedown", mouseDrag);
 // cCoder.addEventListener("mouseover", handleBoids);
 
-function setValues() {
-  drag = 0.7; //need to take some force away, 1 = no drag
-  strength = 0.95; // the "strength" of the spring, out of 1
-}
+// ======================= Spring =======================
 
 function mousePressed() {
   // Did I click on the rectangle?
@@ -175,15 +180,19 @@ function mousePressed() {
 function mouseReleased() {
   // Quit dragging
   dragging = false;
-  currentX = restX;
-  currentY = restY;
-  //   console.log(mouseX, mouseY);
+  // If the ball has been moved from it's resting place(pulled on) Then reset the values to rest and activate/deactivate Dark Mode
+  if (currentY > 279) {
+    console.log(currentY);
+    currentX = restX;
+    currentY = restY;
+    htmTxtDark();
+  }
 }
 
 // mouseReleased();
 
-setValues();
-
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
 }
+
+// =====================================================================

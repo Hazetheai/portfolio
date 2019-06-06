@@ -27,7 +27,7 @@
         <section class="banner">
 
             <div class="emailaddress">
-              <button class="js-emailcopybtn ">
+              <button class="js-emailcopybtn ripple">
                 <a class="js-emaillink" href="#0">
                 </a><span class="get-email">Get My Email!</span>
               </button>
@@ -36,22 +36,22 @@
               </div>
             </div>
           <div class="name">
-            <h2 class="name__header heading-primary--main">Jake</h2>
+            <h1 class="name__header heading-primary--main">Jake</h1>
             <hr class="divider">
-            <h3 class="name__tag heading-primary--sub">
+            <h2 class="name__tag heading-primary--sub">
               <span class="dev">Web developer</span> &amp;
               <span>des<span class="design broken">ign</span>er <br />
               <span class="cCoder wobble">Creative coder</span>
-            </h3>
+            </h2>
             <hr class="divider">
           </div>
           <div class="nav">
             <ul class="nav__list heading-tertiary">
               <li class="nav__list-item">
-                <a class="nav__list-item--link" href="#0">Blog</a>
+                <a class="nav__list-item--link ripple" href="#0">Blog</a>
               </li>
               <li class="nav__list-item">
-                <a class="nav__list-item--link" href="#projects" id="projectNav">Projects</a>
+                <a class="nav__list-item--link ripple" href="#projects" id="projectNav">Projects</a>
               </li>
             </ul>
           </div>
@@ -118,7 +118,7 @@
               ></textarea>
               </div>
               
-              <button class="form__element--btn btn" type="submit">
+              <button class="form__element--btn btn ripple" type="submit">
                   Send 
                   <!-- &#9993; -->
               </button>
@@ -136,20 +136,20 @@
               <li class="social__list-item">
                 <a
                   class="social__list-item--link github paragraph--sm"
-                  href="https://github.com/Hazetheai"
+                  href="https://github.com/Hazetheai" target="_blank" rel="noopener noreferrer"
                   ><img class="social__icon no-filter" src="./images/github.svg" alt="github"></a
                 >
               </li>
               <li class="social__list-item">
                 <a
                   class="social__list-item--link twitter paragraph--sm"
-                  href="https://twitter.com/j_riordan?lang=en"
+                  href="https://twitter.com/j_riordan?lang=en" target="_blank" rel="noopener noreferrer"
                   ><img class="social__icon no-filter" src="./images/twitter.svg" alt="twitter"></a
                 >
               </li>
               <li class="social__list-item">
                 <a
-                  class="social__list-item--link linkedin paragraph--sm"
+                  class="social__list-item--link linkedin paragraph--sm" target="_blank" rel="noopener noreferrer"
                   href="https://www.linkedin.com/in/jake-riordan-610ab1172/"
                   ><img class="social__icon no-filter" src="./images/linkedin.svg" alt="linkedin"></a
                 >
@@ -165,7 +165,7 @@
               </div>
               <article class="project">
                 <div class="project__image">
-                  <a href="https://bumblebeeflowerfarm.ie" class="project__image--link" target="blank">
+                  <a href="https://bumblebeeflowerfarm.ie" class="project__image--link" target="blank" rel="noopener noreferrer">
                     <img 
                     srcset="./images/bbff-optim-sm.jpg 300w, images/bbff-optim.jpg 1000w" 
                     sizes="(min-width: 800px) 50vw, 100vw"
@@ -198,13 +198,13 @@
               <article class="project">
                 <div class="project__image">
                   <a href="https://hazetheai.github.io/quote_generator/" class="project__image--link"   
-                  target="blank">
+                  target="blank" rel="noopener noreferrer">
                   <img 
                   srcset="./images/quote-gen-optim-sm.jpg 300w, images/quote-gen-optim.jpg 1000w" 
                   sizes="(min-width: 800px) 50vw, 100vw"
                   alt="Drawing of Ron Swansons Head."
                   class="image"></a>
-                  <a href="https://github.com/Hazetheai/quote_generator" class="project__button" target="_blank" rel="noopener"><button class="btn--code">Code</button></a>
+                  <a href="https://github.com/Hazetheai/quote_generator" class="project__button ripple" target="_blank" rel="noopener noreferrer"><button class="btn--code ripple">Code</button></a>
 
                 </div>
                 <div class="project__info">
@@ -234,7 +234,7 @@
                     sizes="(min-width: 800px) 50vw, 100vw"                    
                     alt="front page of app, showing text entry boxes." 
                     class="image"></a>
-                    <a href="https://github.com/Hazetheai/Pig-Latin-Translator" target="_blank" rel="noopener" class="project__button"><button class="btn--code">Code</button></a>
+                    <a href="https://github.com/Hazetheai/Pig-Latin-Translator" target="_blank" rel="noopener noreferrer" class="project__button"><button class="btn--code ripple">Code</button></a>
 
                 </div>
                 <div class="project__info">
@@ -277,5 +277,6 @@
     <script src="./js/design.js"></script>
     <script src="./js/scroll.js"></script>
     <script src="./js/copy.js"></script>
+    <script src="./p5/spring.js"></script>
   </body>
 </html>

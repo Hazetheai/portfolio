@@ -1,17 +1,30 @@
+// Flocking Vars
+
 const flock = [];
-var canvas;
-var bg;
-var showBoids = false;
+let canvas;
+let bg;
+let showBoids = false;
 let alignSlider, cohesionSlider, seperationSlider, opacitySlider;
 let opac = 0;
-var slidVal;
+let slidVal;
+
+let socialLinks = [...document.querySelectorAll(".social__list-item")];
 
 const main = document.querySelector("main");
+
+// Switch Vars
+
+var restX, restY, vel, drag, strength, currentX, currentY, ballWidth;
+
+let dragging,
+  hover = false;
+
+let offsetX, offsetY;
 
 function setup() {
   canvas = createCanvas(main.clientWidth, main.clientHeight);
   canvas.position(0, 0);
-  canvas.style("z-index", -1);
+  canvas.style("z-index", 0);
   canvas.style("opacity", 1);
   // canvas.style("pointer-events", "none");
 
@@ -32,6 +45,15 @@ function setup() {
   for (let i = 0; i <= 10; i++) {
     flock.push(new Boid());
   }
+
+  vel = 0; // velocity
+  restX = 20;
+  restY = 50;
+
+  currentX = restX;
+  currentY = restY;
+  ballWidth = 40;
+  ellipse(currentX, currentY, ballWidth);
 }
 
 function windowResized() {
@@ -42,6 +64,16 @@ function draw() {
   slidVal = opacitySlider.value();
   // canvas.style("opacity", slidVal);
   background(bg, [0]);
+
+  line(
+    20 + ballWidth / 2,
+    50,
+    currentX + ballWidth / 2,
+    currentY + ballWidth / 2
+  );
+
+  strokeWeight(2);
+
   for (let boid of flock) {
     boid.edges();
     boid.flock(flock);
@@ -50,6 +82,32 @@ function draw() {
     if (showBoids == true) {
       boid.render();
     }
+  }
+
+  //draw our circle
+  fill(214, 71, 150);
+  ellipse(currentX, currentY, ballWidth);
+  ellipseMode(CORNER);
+  var force = restY - (currentX + currentY) / 2; //how far "stretched"
+  force *= strength; // the "strength" of our "spring"
+  vel *= drag; // reduce the existing velocity a bit with drag
+  vel += force; // add this frame's force to the velocity
+  currentY += vel; // update the position with the adjusted velocity
+  if (
+    mouseX > currentX &&
+    mouseX < currentX + ballWidth &&
+    mouseY > currentY &&
+    mouseY < currentY + ballWidth
+  ) {
+    rollover = true;
+    console.log("Rollover Baby!");
+  } else {
+    rollover = false;
+  }
+
+  if (dragging) {
+    currentX = mouseX + offsetX;
+    currentY = mouseY + offsetY;
   }
 }
 
@@ -60,6 +118,7 @@ const handleBoids = () => {
     opacitySlider.value(0.2);
     for (let i = 0; i <= 10; i++) {
       addBoids();
+      console.log("working");
     }
     return (showBoids = true);
   } else if (showBoids == true) {
@@ -82,9 +141,49 @@ function mouseDragged() {
   }
 }
 
+socialLinks.map(el => {
+  el.addEventListener("mouseover", handleBoids);
+});
 cCoder.addEventListener("mouseover", handleBoids);
 cCoder.addEventListener("touchend", handleBoids);
+
 // cCoder.addEventListener("click", handleBoids);
 
 // document.addEventListener("mousedown", mouseDrag);
 // cCoder.addEventListener("mouseover", handleBoids);
+
+function setValues() {
+  drag = 0.7; //need to take some force away, 1 = no drag
+  strength = 0.95; // the "strength" of the spring, out of 1
+}
+
+function mousePressed() {
+  // Did I click on the rectangle?
+  if (
+    mouseX > currentX &&
+    mouseX < currentX + ballWidth &&
+    mouseY > currentY &&
+    mouseY < currentY + ballWidth
+  ) {
+    dragging = true;
+    // If so, keep track of relative location of click to corner of rectangle
+    offsetX = currentX - mouseX;
+    offsetY = currentY - mouseY;
+  }
+}
+
+function mouseReleased() {
+  // Quit dragging
+  dragging = false;
+  currentX = restX;
+  currentY = restY;
+  //   console.log(mouseX, mouseY);
+}
+
+// mouseReleased();
+
+setValues();
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+}

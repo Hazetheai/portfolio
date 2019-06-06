@@ -210,7 +210,8 @@ body {
     margin-bottom: 3rem; }
 
 .highlight {
-  background-color: #c4c4c4; }
+  background-color: #333333;
+  color: #f7f7f7; }
 
 .t--dark,
 video {
@@ -255,7 +256,8 @@ video {
   border: 2px solid #333333;
   background-color: transparent;
   color: #333333;
-  width: 25%; }
+  width: 25%;
+  cursor: pointer; }
   .btn:hover {
     transform: scale(1.05);
     opacity: 1;
@@ -283,6 +285,32 @@ video {
   background-color: #c4c4c4;
   opacity: 0.3;
   box-shadow: none; }
+
+.ripple {
+  position: relative;
+  overflow: hidden;
+  transform: translate3d(0, 0, 0); }
+
+.ripple:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  background-image: radial-gradient(circle, #999 10%, transparent 10.01%);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  transform: scale(10, 10);
+  opacity: 0;
+  transition: transform 0.5s, opacity 0.5s; }
+
+.ripple:active:after {
+  transform: scale(0, 0);
+  opacity: 0.3;
+  transition: 0s; }
 
 .banner {
   position: relative;
@@ -474,8 +502,8 @@ video {
         .form__element--textarea, .form__element--textarea-webkit-autofill, .form__element--textarea-webkit-autofill:hover, .form__element--textarea-webkit-autofill:focus {
           width: 100%; } }
     .form__element--btn {
-      margin: 0.5rem 0.5rem 0.5rem auto; }
-      @media only screen and (max-width: 37.5em) {
+      margin: 0.5rem 1.5rem 0.5rem auto; }
+      @media only screen and (max-width: 56.25em) {
         .form__element--btn {
           width: 100%; } }
 

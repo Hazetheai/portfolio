@@ -17,7 +17,10 @@ const cCoder = document.querySelector(".cCoder");
 
 var restX, restY, vel, drag, strength, currentX, currentY, ballWidth, showText;
 
-let numClicks = 0;
+const warning1 = `If you keep going, you're going to break it........`;
+const warning2 = `See?......\n This is why you can't have nice things\n Good thing I got a spare bulb around lying around here somewhere... `;
+
+let numClicks = 1;
 let dragging,
   hover = false;
 
@@ -84,7 +87,12 @@ function draw() {
       boid.render();
     }
   }
-  //draw our circle
+  //================== Spring
+  if (numClicks % 4 === 0) {
+    console.log(numClicks);
+    text(warning1, 100, 350);
+  }
+  // draw our circle
   line(
     20 + ballWidth / 2,
     0,
@@ -163,6 +171,24 @@ cCoder.addEventListener("touchend", handleBoids);
 
 // ======================= Spring =======================
 
+// ========= Typewriter =========
+
+// if (numClicks % 4 === 0) {
+//   console.log(numClicks);
+//   typeWriter(warning1, 0, 200, 200, 100);
+// } else if (numClicks % 9 === 0) {
+//   typeWriter(warning2, 0, 300, 200, 100);
+// }
+function typeWriter(sentence, n, x, y, speed) {
+  if (n < sentence.length) {
+    text(sentence.substring(0, n + 1), x, y);
+    n++;
+    setTimeout(function() {
+      typeWriter(sentence, n, x, y, speed);
+    }, speed);
+  }
+}
+
 function mousePressed() {
   // Did I click on the rectangle?
   if (
@@ -181,39 +207,35 @@ function mousePressed() {
 function mouseReleased() {
   // Quit dragging
   dragging = false;
-  // If the ball has been moved from it's resting place(pulled on) Then reset the values to rest and activate/deactivate Dark Mode
+  // If the ball has been moved from it's resting place(pulled on)
+  // Then reset the values to rest and activate/deactivate Dark Mode
   if (currentY > 279) {
-    // console.log(currentY);
     currentX = restX;
     currentY = restY;
     htmTxtDark();
     numClicks++;
-    if (numClicks % 3 === 0) {
-      // handleBoids();
-      console.log("If you keep going, you're going to break it...");
-      if (numClicks > 1) {
-        console.log(
-          "I told you.\n Damn kids, soon as you tell'em no, they keep going.\n Good thing I got a spare around lying around here somewhere... "
-        );
-        canvas.style("z-index", 5);
-        canvas.style("pointer-events", "none");
+    // Effects to simulate broken gear.
 
-        // noLoop();
-        noCursor();
-        if (darkTheme === false) {
+    if (numClicks % 9 === 0) {
+      typeWriter(warning2, 0, 300, 300, 50);
+      canvas.style("z-index", 5);
+      canvas.style("pointer-events", "none");
+
+      noLoop();
+      noCursor();
+      if (darkTheme === false) {
+        htmTxtDark();
+      }
+      setTimeout(() => {
+        canvas.style("z-index", 0);
+        canvas.style("pointer-events", "");
+        cursor();
+        loop();
+        handleBoids();
+        if (darkTheme === true) {
           htmTxtDark();
         }
-        setTimeout(() => {
-          canvas.style("z-index", 0);
-          canvas.style("pointer-events", "");
-          cursor();
-          // loop();
-          handleBoids();
-          if (darkTheme === true) {
-            htmTxtDark();
-          }
-        }, 6000);
-      }
+      }, 7000);
     }
   }
 }

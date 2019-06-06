@@ -1,4 +1,5 @@
 .footer {
+  position: relative;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -8,4 +9,5 @@
   background-color: $color-black;
   box-shadow: $box-shadow;
   color: $color-text-light;
+  z-index: 1;
 }

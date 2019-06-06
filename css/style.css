@@ -508,6 +508,7 @@ video {
           width: 100%; } }
 
 .footer {
+  position: relative;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -515,9 +516,11 @@ video {
   padding: 1rem;
   background-color: #111111;
   box-shadow: 0 1.5em 4rem rgba(17, 17, 17, 0.15);
-  color: #f7f7f7; }
+  color: #f7f7f7;
+  z-index: 1; }
 
 .contact {
+  position: relative;
   margin: 0rem 8rem;
   display: flex;
   justify-content: space-between;
@@ -755,9 +758,12 @@ main {
 .g-wrapper {
   background-color: transparent; }
 
-.projects__header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 4rem;
-  background-color: transparent; }
+.projects {
+  position: relative;
+  z-index: 1; }
+  .projects__header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 4rem;
+    background-color: transparent; }

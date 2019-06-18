@@ -66,7 +66,7 @@ function setup() {
 
   currentX = restX;
   currentY = restY;
-  ballWidth = 40;
+  ballWidth = 20;
   ellipse(currentX, currentY, ballWidth);
 
   drag = 0.75; //need to take some force away, 1 = no drag
@@ -93,10 +93,10 @@ function draw() {
     }
   }
   //================== Spring
-  if (numClicks % 4 === 0) {
-    console.log(numClicks);
-    text(warning1, 100, 350);
-  }
+  // if (numClicks % 4 === 0) {
+  //   console.log(numClicks);
+  //   text(warning1, 100, 350);
+  // }
   // draw our circle
   line(
     20 + ballWidth / 2,
@@ -107,7 +107,7 @@ function draw() {
 
   strokeWeight(1);
   textSize(32);
-  fill(214, 71, 150);
+  fill(101, 62, 34);
   ellipse(currentX, currentY, ballWidth);
   ellipseMode(CORNER);
   var force = restY - (currentX + currentY) / 2; //how far "stretched"
@@ -226,10 +226,10 @@ function mouseReleased() {
     numClicks++;
     // Effects to simulate broken gear.
     if (numClicks == 8) {
-      frameRate(5);
+      // frameRate(5);
     }
     if (numClicks % 9 === 0) {
-      typeWriter(randomNum(), 0, 300, 300, 50);
+      // typeWriter(randomNum(), mouse, 300, 300, 50);
       canvas.style("z-index", 5);
       canvas.style("pointer-events", "none");
 

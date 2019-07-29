@@ -1,282 +1,256 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0 minimum-scale=1" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta name="description" content="Passionate web developer residing in Montrèal. Convert your ideas into a web presence, brand and experience."/>
-    <link rel="stylesheet" href="./css/style.css" type="text/css" />
-    <link
-    href="https://fonts.googleapis.com/css?family=Inconsolata"
-    rel="stylesheet"
-    />
-    
-    <title>Jake Riordan | Web Developer</title>
-  </head>
-  <body>
-    <main>
-      <div class="switch-container">
-        <div class="switch">
-          <label class="switch__label" for="switch"></label>
-          <!-- <input class="switch__input" type="checkbox" name="switch" id="switch"> -->
-        </div>
-      </div>
-      <!-- <div class="g-wrapper"> -->
-        <section class="banner">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta content="width=device-width, initial-scale=1.0 minimum-scale=1" name="viewport"/>
+        <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+        <meta content="Passionate web developer residing in Montrèal. Convert your ideas into a web presence, brand and experience." name="description"/>
+        <link href="./css/style.css" rel="stylesheet" type="text/css"/>
+        <link
+        href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet"/>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144744710-1"></script>
+        <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-            <div class="emailaddress">
-              <button class="js-emailcopybtn ripple">
-                <a class="js-emaillink" href="#0">
-                </a><span class="get-email">Get My Email!</span>
-              </button>
-              <div class="tooltip">
-                <span class="tooltiptext">add to clipboard!</span>
-              </div>
+  gtag('config', 'UA-144744710-1');
+</script>
+
+
+        <title>Jake Riordan | Web Developer</title>
+    </head>
+    <body>
+        <main>
+            <div class="switch-container">
+                <div class="switch">
+                    <label class="switch__label" for="switch"></label>
+                    <!-- <input class="switch__input" type="checkbox" name="switch" id="switch"> -->
+                </div>
             </div>
-          <div class="name">
-            <h1 class="name__header heading-primary--main">Jake</h1>
-            <hr class="divider">
-            <h2 class="name__tag heading-primary--sub">
-              <span class="dev">Web developer</span> &amp;
-              <span>des<span class="design broken">ign</span>er <br />
-              <span class="cCoder wobble">Creative coder</span>
-            </h2>
-            <hr class="divider">
-          </div>
-          <div class="nav">
-            <ul class="nav__list heading-tertiary">
-              <li class="nav__list-item">
-                <a class="nav__list-item--link ripple" href="#0">Blog</a>
-              </li>
-              <li class="nav__list-item">
-                <a class="nav__list-item--link ripple" href="#projects" id="projectNav">Projects</a>
-              </li>
-            </ul>
-          </div>
-          <div class="info paragraph">
-            <p class="info--1">
-              Hailing from Ireland, currently living in Montrèal, QC. <br />
-              <br />
-              Available for freelance work. <br />
-              <br />
-              <span id="high" class="highlight"
-                >Actively seeking a front-end developer position.</span
-              >
-            </p>
-            <br />
-            <p class="info--2">
-              Happiest when creating. Whether it’s a new site, a funny app or
-              even some music, I need to be making something. <br />
-              <br />If you have an idea you’d like to bring to life, please let
-              me know, I can’t wait to get started!
-            </p>
-            <hr class="divider">
-          </div>
-        </section>
-        <section class="contact">
-          <!-- <div class="form"> -->
-          <form class="form" action="POST" data-netlify="true" >
-            <div class="form__element">
-              <label class="form__element--label" for="Name">Name:</label>
-              <input
-              class="form__element--input"
-              type="text"
-              name="name"
-              id="Name"
-              required
-              onfocus="formEnter();"
-            />   
-            </div>
-            <div class="form__element">
-              <label class="form__element--label" for="Email">Email:</label>
-              <input
-                class="form__element--input"
-                type="email"
-                name="email"
-                id="Email"
-                required
-                onchange="formEnter();"
+            <!-- <div class="g-wrapper"> -->
+            <section class="banner">
 
-                onfocus="formEnter();"
-              />
-            </div>
-            <div class="form__element">
-              <label class="form__element--label-txt" for="Message"
-                  >Message:</label
-              >
-              <textarea
-                  class="form__element--textarea"
-                  name="message"
-                  id="Message"
-                  cols="30"
-                  rows="3"
-                  onchange="formEnter();"
-                  onfocus="formEnter();"
-
-              ></textarea>
-              </div>
-              
-              <button class="form__element--btn btn ripple" type="submit">
-                  Send 
-                  <!-- &#9993; -->
-              </button>
-          </form>
-          <!-- </div> -->
-
-          <div class="social">
-            <img
-              class="social__image no-filter"
-              src="./images/Me.svg"
-              alt="My Profile"
-              srcset=""
-            />
-            <ul class="social__list">
-              <li class="social__list-item">
-                <a
-                  class="social__list-item--link github paragraph--sm"
-                  href="https://github.com/Hazetheai" target="_blank" rel="noopener noreferrer"
-                  ><img class="social__icon no-filter" src="./images/github.svg" alt="github"></a
-                >
-              </li>
-              <li class="social__list-item">
-                <a
-                  class="social__list-item--link twitter paragraph--sm"
-                  href="https://twitter.com/j_riordan?lang=en" target="_blank" rel="noopener noreferrer"
-                  ><img class="social__icon no-filter" src="./images/twitter.svg" alt="twitter"></a
-                >
-              </li>
-              <li class="social__list-item">
-                <a
-                  class="social__list-item--link linkedin paragraph--sm" target="_blank" rel="noopener noreferrer"
-                  href="https://www.linkedin.com/in/jake-riordan-610ab1172/"
-                  ><img class="social__icon no-filter" src="./images/linkedin.svg" alt="linkedin"></a
-                >
-              </li>
-            </ul>
-          </div>
-        </section>
-      <!-- </div> -->
-          <section class="projects" id="section-projects">
-            <!-- <div class="p-wrapper"> -->
-              <div class="projects__header">
-                <h2 class="heading-secondary">Projects</h2>
-              </div>
-              <article class="project">
-                <div class="project__image">
-                  <a href="https://bumblebeeflowerfarm.ie" class="project__image--link" target="blank" rel="noopener noreferrer">
-                    <img 
-                    srcset="./images/bbff-optim-sm.jpg 300w, images/bbff-optim.jpg 1000w" 
-                    sizes="(min-width: 800px) 50vw, 100vw"
-                    alt="washed image of flowers in a polytunnel." 
-                    class="image"></a>
-                    <!-- <a href="#0" class="project__button" target="_blank"><button class="btn--code">Code</button></a> -->
-
-
+                <div class="emailaddress">
+                    <button class="js-emailcopybtn ripple">
+                        <a class="js-emaillink" href="#0"></a>
+                        <span class="get-email">Get My Email!</span>
+                    </button>
+                    <div class="tooltip">
+                        <span class="tooltiptext">add to clipboard!</span>
+                    </div>
                 </div>
-              
-                <div class="project__info">
-                  <div class="project__info-item">
-                    <h3 class="project__info-item--title">Name: </h3>
-                    <p class="project__info-item--desc">Bumblebee Flower Farm</p>
-                  </div>
-                  <div class="project__info-item">
-                    <h3 class="project__info-item--title">Purpose: </h3>
-                    <p class="project__info-item--desc">Redesign old site and incorporate ordering wedding flowers á la carte.</p>
-                  </div>
-                  <div class="project__info-item">
-                    <h3 class="project__info-item--title">Info: </h3>
-                    <p class="project__info-item--desc">Fast moving physical business with rapid growth.</p>
-                  </div>
-                  <div class="project__info-item">
-                    <h3 class="project__info-item--title">Tools Used: </h3>
-                    <p class="project__info-item--desc">Wordpress, php, css, photoshop, figma, git/github, npm</p>
-                  </div>
-                </div>
-              </article>
-              <article class="project">
-                <div class="project__image">
-                  <a href="https://hazetheai.github.io/quote_generator/" class="project__image--link"   
-                  target="blank" rel="noopener noreferrer">
-                  <img 
-                  srcset="./images/quote-gen-optim-sm.jpg 300w, images/quote-gen-optim.jpg 1000w" 
-                  sizes="(min-width: 800px) 50vw, 100vw"
-                  alt="Drawing of Ron Swansons Head."
-                  class="image"></a>
-                  <a href="https://github.com/Hazetheai/quote_generator" class="project__button ripple" target="_blank" rel="noopener noreferrer"><button class="btn--code ripple">Code</button></a>
+                <div class="name">
+                    <h1 class="name__header heading-primary--main">Jake</h1>
+                    <hr class="divider">
+                    <h2 class="name__tag heading-primary--sub">
+                        <span class="dev">Web developer</span>
+                        &amp;
+                        <span>des<span class="design broken">ign</span>er
+                            <br/>
+                            <span class="cCoder wobble">Creative coder</span>
+                        </h2>
+                        <hr class="divider">
+                    </div>
+                    <div class="nav">
+                        <ul class="nav__list heading-tertiary">
+                            <li class="nav__list-item">
+                                <a class="nav__list-item--link ripple" href="#0">Blog</a>
+                            </li>
+                            <li class="nav__list-item">
+                                <a class="nav__list-item--link ripple" href="#projects" id="projectNav">Projects</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="info paragraph">
+                        <p class="info--1">
+                            Hailing from Ireland, currently living in Montrèal, QC.
+                            <br/>
+                            <br/>
+                            Available for freelance work.
+                            <br/>
+                            <br/>
+                            <span class="highlight" id="high">Actively seeking a front-end developer position.</span>
+                        </p>
+                        <br/>
+                        <p class="info--2">
+                            Happiest when creating. Whether it’s a new site, a funny app or
+                                                                  even some music, I need to be making something.
+                            <br/>
+                            <br/>If you have an idea you’d like to bring to life, please let
+                                                                  me know, I can’t wait to get started!
+                        </p>
+                        <hr class="divider">
+                    </div>
+                </section>
+                <section
+                    class="contact">
+                    <!-- <div class="form"> -->
+                    <form action="POST" class="form" data-netlify="true">
+                        <div class="form__element">
+                            <label class="form__element--label" for="Name">Name:</label>
+                            <input class="form__element--input" id="Name" name="name" onfocus="formEnter();" required type="text"/>
+                        </div>
+                        <div class="form__element">
+                            <label class="form__element--label" for="Email">Email:</label>
+                            <input class="form__element--input" id="Email" name="email" onchange="formEnter();" onfocus="formEnter();" required type="email"/>
+                        </div>
+                        <div class="form__element">
+                            <label class="form__element--label-txt" for="Message">Message:</label>
+                            <textarea class="form__element--textarea" cols="30" id="Message" name="message" onchange="formEnter();" onfocus="formEnter();" rows="3"></textarea>
+                        </div>
 
-                </div>
-                <div class="project__info">
-                  <div class="project__info-item">
-                    <h3 class="project__info-item--title">Name:</h3>
-                    <p class="project__info-item--desc">Quote Generator</p>
-                  </div>
-                  <div class="project__info-item">
-                    <h3 class="project__info-item--title">Purpose:</h3>
-                    <p class="project__info-item--desc"> React project to demonstrate fetching and displaying data from APIs</p>
-                  </div>
-                  <div class="project__info-item">
-                    <h3 class="project__info-item--title">Info: </h3>
-                    <p class="project__info-item--desc">You can get a new author, view previous quotes and tweet them from the app.</p>
-                  </div>
-                  <div class="project__info-item">
-                    <h3 class="project__info-item--title">Tools Used: </h3>
-                    <p class="project__info-item--desc">React, fetch API, html/jsx, css, git/github, npm</p>
-                  </div>
-                </div>
-              </article>
-              <article class="project">
-                <div class="project__image">
-                  <a href="https://hazetheai.github.io/Pig-Latin-Translator/" target="blank" class="project__image--link" >
-                    <img 
-                    srcset="./images/pig-latin-optim-sm.jpg 3000w, images/pig-latin-optim.jpg 1000w" 
-                    sizes="(min-width: 800px) 50vw, 100vw"                    
-                    alt="front page of app, showing text entry boxes." 
-                    class="image"></a>
-                    <a href="https://github.com/Hazetheai/Pig-Latin-Translator" target="_blank" rel="noopener noreferrer" class="project__button"><button class="btn--code ripple">Code</button></a>
+                        <button class="form__element--btn btn ripple" type="submit">
+                            Send
+                            <!-- &#9993; -->
+                        </button>
+                    </form>
+                    <!-- </div> -->
 
-                </div>
-                <div class="project__info">
-                  <div class="project__info-item">
-                    <h3 class="project__info-item--title">Name: </h3>
-                    <p class="project__info-item--desc">Pig latin translator</p>
-                  </div>
-                  <div class="project__info-item">
-                    <h3 class="project__info-item--title">Purpose:  </h3>
-                    <p class="project__info-item--desc">Converts boring old english into <span class="gib">gibberish</span> <br> witty pig latin.</p>
-                  </div>
-                  <div class="project__info-item">
-                    <h3 class="project__info-item--title">Info:</h3>
-                    <p class="project__info-item--desc">Using an algorithm created from solving a problem on FCCs JavaScript section, I then decided to solve an important problem. Revitalising a once great language.</p>
-                  </div>
-                  <div class="project__info-item">
-                    <h3 class="project__info-item--title">Tools Used:</h3>
-                    <p class="project__info-item--desc"> JavaScript, html, css, figma, npm, git/github, web speech API, a touch of nonsense</p>
-                  </div>
-                </div>
-              </article>
-            <!-- </div> -->
-          </section>
-          <footer class="footer">
-            <div class="footer__container"><p>
-              All Rights Get Served
-            </p></div>
-            <div class="footer__container"><p>
-              
-            </p></div>
-            <div class="footer__container">© Jake Riordan 2019</div>
-          </footer>
-    </main>
-    <script src="./js/form.js"></script>
-    <script src="./js/darkMode.js"></script>
-    <script src="./p5/p5.min.js"></script>
-    <script src="./p5/p5.dom.min.js"></script>
-    <script src="./p5/boid.js"></script>
-    <script src="./p5/sketch.js"></script>
-    <script src="./js/design.js"></script>
-    <script src="./js/scroll.js"></script>
-    <script src="./js/copy.js"></script>
-    <script src="./p5/spring.js"></script>
-  </body>
+                    <div class="social">
+                        <img alt="My Profile" class="social__image no-filter" src="./images/Me.svg" srcset=""/>
+                        <ul class="social__list">
+                            <li class="social__list-item">
+                                <a class="social__list-item--link github paragraph--sm" href="https://github.com/Hazetheai" rel="noopener noreferrer" target="_blank"><img alt="github" class="social__icon no-filter" src="./images/github.svg"></a>
+                            </li>
+                            <li class="social__list-item">
+                                <a class="social__list-item--link twitter paragraph--sm" href="https://twitter.com/j_riordan?lang=en" rel="noopener noreferrer" target="_blank"><img alt="twitter" class="social__icon no-filter" src="./images/twitter.svg"></a>
+                            </li>
+                            <li class="social__list-item">
+                                <a class="social__list-item--link linkedin paragraph--sm" href="https://www.linkedin.com/in/jake-riordan-610ab1172/" rel="noopener noreferrer" target="_blank"><img alt="linkedin" class="social__icon no-filter" src="./images/linkedin.svg"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <!-- </div> -->
+                <section
+                    class="projects" id="section-projects">
+                    <!-- <div class="p-wrapper"> -->
+                    <div class="projects__header">
+                        <h2 class="heading-secondary">Projects</h2>
+                    </div>
+                    <article class="project">
+                        <div class="project__image">
+                            <a class="project__image--link" href="https://bumblebeeflowerfarm.ie" rel="noopener noreferrer" target="blank">
+                                <img alt="washed image of flowers in a polytunnel." class="image" sizes="(min-width: 800px) 50vw, 100vw" srcset="./images/bbff-optim-sm.jpg 300w, images/bbff-optim.jpg 1000w"></a>
+                            <!-- <a href="#0" class="project__button" target="_blank"><button class="btn--code">Code</button></a> -->
+
+
+                        </div>
+
+                        <div class="project__info">
+                            <div class="project__info-item">
+                                <h3 class="project__info-item--title">Name:
+                                </h3>
+                                <p class="project__info-item--desc">Bumblebee Flower Farm</p>
+                            </div>
+                            <div class="project__info-item">
+                                <h3 class="project__info-item--title">Purpose:
+                                </h3>
+                                <p class="project__info-item--desc">Redesign old site and incorporate ordering wedding flowers á la carte.</p>
+                            </div>
+                            <div class="project__info-item">
+                                <h3 class="project__info-item--title">Info:
+                                </h3>
+                                <p class="project__info-item--desc">Fast moving physical business with rapid growth.</p>
+                            </div>
+                            <div class="project__info-item">
+                                <h3 class="project__info-item--title">Tools Used:
+                                </h3>
+                                <p class="project__info-item--desc">Wordpress, php, css, photoshop, figma, git/github, npm</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="project">
+                        <div class="project__image">
+                            <a class="project__image--link" href="https://hazetheai.github.io/quote_generator/" rel="noopener noreferrer" target="blank">
+                                <img alt="Drawing of Ron Swansons Head." class="image" sizes="(min-width: 800px) 50vw, 100vw" srcset="./images/quote-gen-optim-sm.jpg 300w, images/quote-gen-optim.jpg 1000w"></a>
+                            <a class="project__button ripple" href="https://github.com/Hazetheai/quote_generator" rel="noopener noreferrer" target="_blank">
+                                <button class="btn--code ripple">Code</button>
+                            </a>
+
+                        </div>
+                        <div class="project__info">
+                            <div class="project__info-item">
+                                <h3 class="project__info-item--title">Name:</h3>
+                                <p class="project__info-item--desc">Quote Generator</p>
+                            </div>
+                            <div class="project__info-item">
+                                <h3 class="project__info-item--title">Purpose:</h3>
+                                <p class="project__info-item--desc">
+                                    React project to demonstrate fetching and displaying data from APIs</p>
+                            </div>
+                            <div class="project__info-item">
+                                <h3 class="project__info-item--title">Info:
+                                </h3>
+                                <p class="project__info-item--desc">You can get a new author, view previous quotes and tweet them from the app.</p>
+                            </div>
+                            <div class="project__info-item">
+                                <h3 class="project__info-item--title">Tools Used:
+                                </h3>
+                                <p class="project__info-item--desc">React, fetch API, html/jsx, css, git/github, npm</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="project">
+                        <div class="project__image">
+                            <a class="project__image--link" href="https://hazetheai.github.io/Pig-Latin-Translator/" target="blank">
+                                <img alt="front page of app, showing text entry boxes." class="image" sizes="(min-width: 800px) 50vw, 100vw" srcset="./images/pig-latin-optim-sm.jpg 3000w, images/pig-latin-optim.jpg 1000w"></a>
+                            <a class="project__button" href="https://github.com/Hazetheai/Pig-Latin-Translator" rel="noopener noreferrer" target="_blank">
+                                <button class="btn--code ripple">Code</button>
+                            </a>
+
+                        </div>
+                        <div class="project__info">
+                            <div class="project__info-item">
+                                <h3 class="project__info-item--title">Name:
+                                </h3>
+                                <p class="project__info-item--desc">Pig latin translator</p>
+                            </div>
+                            <div class="project__info-item">
+                                <h3 class="project__info-item--title">Purpose:
+                                </h3>
+                                <p class="project__info-item--desc">Converts boring old english into
+                                    <span class="gib">gibberish</span>
+                                    <br>
+                                    witty pig latin.</p>
+                            </div>
+                            <div class="project__info-item">
+                                <h3 class="project__info-item--title">Info:</h3>
+                                <p class="project__info-item--desc">Using an algorithm created from solving a problem on FCCs JavaScript section, I then decided to solve an important problem. Revitalising a once great language.</p>
+                            </div>
+                            <div class="project__info-item">
+                                <h3 class="project__info-item--title">Tools Used:</h3>
+                                <p class="project__info-item--desc">
+                                    JavaScript, html, css, figma, npm, git/github, web speech API, a touch of nonsense</p>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- </div> -->
+                </section>
+                <footer class="footer">
+                    <div class="footer__container">
+                        <p>
+                            All Rights Get Served
+                        </p>
+                    </div>
+                    <div class="footer__container">
+                        <p></p>
+                    </div>
+                    <div class="footer__container">© Jake Riordan 2019</div>
+                </footer>
+            </main>
+            <script src="./js/form.js"></script>
+            <script src="./js/darkMode.js"></script>
+            <script src="./p5/p5.min.js"></script>
+            <script src="./p5/p5.dom.min.js"></script>
+            <script src="./p5/boid.js"></script>
+            <script src="./p5/sketch.js"></script>
+            <script src="./js/design.js"></script>
+            <script src="./js/scroll.js"></script>
+            <script src="./js/copy.js"></script>
+            <script src="./p5/spring.js"></script>
+        </body>
+    </body>
 </html>

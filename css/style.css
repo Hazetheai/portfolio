@@ -449,7 +449,7 @@ video {
   .form__element {
     display: flex;
     justify-content: flex-start;
-    align-items: baseline;
+    align-items: flex-start;
     background-color: inherit;
     font-size: 1.6rem;
     overflow: hidden; }

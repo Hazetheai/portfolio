@@ -38,6 +38,10 @@ body {
   }
 }
 
+img {
+  transition: all 300ms;
+}
+
 .divider {
   max-width: 75%;
   margin: 5rem 0rem;

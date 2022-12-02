@@ -7,18 +7,14 @@ video {
     color: #653e22;
   }
 
-  &-img:not(.no-filter) {
+  img:not(.no-filter) {
     filter: invert(100%);
     border: none;
-
     mix-blend-mode: hard-light;
     opacity: 0.8;
     border-radius: 3px;
-    padding: 1rem;
 
     &:hover {
-      border: 3px solid $color-white;
-
       mix-blend-mode: normal;
       transform: scale(1.05);
       opacity: 1;
@@ -31,21 +27,25 @@ video {
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    // background-color: $color-black;
-    filter: invert(100%);
-    transition: all 750ms;
-    & > * {
-      color: #653e22;
-    }
+// @media (prefers-color-scheme: dark) {
+//   html {
+//     // background-color: $color-black;
+//     filter: invert(100%);
+//     transition: all 750ms;
+//     & > * {
+//       color: #653e22;
+//     }
 
-    &-img:not(.no-filter) {
-      filter: invert(100%);
-    }
+//     .hide-for-dark {
+//       display: none;
+//     }
 
-    &-txt {
-      color: #653e22;
-    }
-  }
-}
+//     img:not(.no-filter) {
+//       filter: invert(100%);
+//     }
+
+//     &-txt {
+//       color: #653e22;
+//     }
+//   }
+// }

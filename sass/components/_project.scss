@@ -29,6 +29,9 @@
   }
 
   .image {
+    position: relative;
+    top: -1px;
+    left: -1px;
     width: 80%;
     object-fit: contain;
     cursor: pointer;
@@ -49,6 +52,7 @@
     margin: 2rem 1rem;
     display: flex;
     justify-content: center;
+    overflow: hidden;
 
     &--link {
       display: flex;

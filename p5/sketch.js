@@ -31,10 +31,17 @@ let dragging,
 
 let offsetX, offsetY;
 
+function windowResized() {
+  resizeCanvas(main.clientWidth, main.clientHeight);
+}
+
 // ======================= Setup & Draw combining both animations =======================
 
 function setup() {
   // ======================= Boid
+
+  window.addEventListener('resize', windowResized)
+
   canvas = createCanvas(main.clientWidth, main.clientHeight);
   canvas.position(0, 0);
   canvas.style("z-index", 0);
@@ -73,9 +80,7 @@ function setup() {
   strength = 0.3; // the "strength" of the spring, out of 1
 }
 
-function windowResized() {
-  resizeCanvas(main.clientWidth, main.clientHeight);
-}
+
 
 function draw() {
   // ======================= Boid
@@ -189,7 +194,7 @@ function typeWriter(sentence, n, x, y, speed) {
   if (n < sentence.length) {
     text(sentence.substring(0, n + 1), x, y);
     n++;
-    setTimeout(function() {
+    setTimeout(function () {
       typeWriter(sentence, n, x, y, speed);
     }, speed);
   }

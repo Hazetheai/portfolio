@@ -45,6 +45,9 @@ body {
     body {
       padding: 0; } }
 
+img {
+  transition: all 300ms; }
+
 .divider {
   max-width: 75%;
   margin: 5rem 0rem;
@@ -220,17 +223,15 @@ video {
   .t--dark > *,
   video > * {
     color: #653e22; }
-  .t--dark-img:not(.no-filter),
-  video-img:not(.no-filter) {
+  .t--dark img:not(.no-filter),
+  video img:not(.no-filter) {
     filter: invert(100%);
     border: none;
     mix-blend-mode: hard-light;
     opacity: 0.8;
-    border-radius: 3px;
-    padding: 1rem; }
-    .t--dark-img:not(.no-filter):hover,
-    video-img:not(.no-filter):hover {
-      border: 3px solid #f0ffff;
+    border-radius: 3px; }
+    .t--dark img:not(.no-filter):hover,
+    video img:not(.no-filter):hover {
       mix-blend-mode: normal;
       transform: scale(1.05);
       opacity: 1;
@@ -238,17 +239,6 @@ video {
   .t--dark-txt,
   video-txt {
     color: #653e22; }
-
-@media (prefers-color-scheme: dark) {
-  html {
-    filter: invert(100%);
-    transition: all 750ms; }
-    html > * {
-      color: #653e22; }
-    html-img:not(.no-filter) {
-      filter: invert(100%); }
-    html-txt {
-      color: #653e22; } }
 
 .btn {
   padding: 1rem;
@@ -634,6 +624,9 @@ video {
   .project__button {
     cursor: pointer; }
   .project .image {
+    position: relative;
+    top: -1px;
+    left: -1px;
     width: 80%;
     object-fit: contain;
     cursor: pointer;
@@ -650,7 +643,8 @@ video {
     flex: 1 3 33%;
     margin: 2rem 1rem;
     display: flex;
-    justify-content: center; }
+    justify-content: center;
+    overflow: hidden; }
     .project__image--link {
       display: flex;
       justify-content: center;
